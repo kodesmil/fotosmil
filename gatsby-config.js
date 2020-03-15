@@ -45,7 +45,6 @@ module.exports = {
         mailchimp: true,
         sources: {
           local: true,
-          contentful: true,
         },
       },
     },
