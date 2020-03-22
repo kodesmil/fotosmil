@@ -6,11 +6,11 @@ import {
   NavLink,
   Flex,
   Box,
-  Heading,
-  Container,
-  Text,
+  Button,
   Grid,
   Styled,
+  Label,
+  Input,
 } from "theme-ui"
 import Img from "gatsby-image"
 import Moments from "../../content/assets/svg/Moments.svg"
@@ -33,7 +33,7 @@ class HeaderSection extends React.Component {
           position: `fixed`,
           background: `white`,
           zIndex: `100000`,
-          borderBottom: `2px orange solid`,
+          borderBottom: `2px purple solid`,
         }}
         as="nav"
       >
@@ -77,10 +77,10 @@ const BlogIndex = ({ data, location }) => {
           FotoSmil Trondheim
         </NavLink>
         <div style={{ flex: "auto" }}></div>
-        <NavLink href="#!" p={2}>
+        <NavLink href="#contact" p={2}>
           Contact
         </NavLink>
-        <NavLink href="#!" p={2}>
+        <NavLink href="#contact" p={2}>
           Blog
         </NavLink>
       </HeaderSection>
@@ -148,7 +148,7 @@ const BlogIndex = ({ data, location }) => {
             marginTop: ["3em"],
           }}
           gap="3em"
-          columns={[1, 2, 2, 2, 3]}
+          columns={[1, 1, 2, 2, 3]}
         >
           {features.map(feature => (
             <Box
@@ -200,24 +200,24 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="All posts" />
       <Grid
         gap="2em"
-        columns={[2, 5]}
+        columns={[5]}
         sx={{
           marginTop: "5em",
           alignItems: "center",
           alignContent: "center",
           background: "white",
-          padding: "2em",
-          borderRadius: "1em",
+          padding: "1em",
           boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
-          marginLeft: ["5%", "10%", "15%"],
-          marginRight: ["5%", "10%", "15%"],
         }}
       >
         {data.logos.nodes.map(logo => (
           <Box>
             <Img
+              style={{ maxHeight: "100px" }}
               imgStyle={{
                 filter: "grayscale(25%)",
+                maxHeight: "100px",
+                objectFit: "contain"
               }}
               fluid={logo.childImageSharp.fluid}
               alt=""
@@ -254,6 +254,61 @@ const BlogIndex = ({ data, location }) => {
           </Box>
         )
       })} */}
+
+      <Box
+        anchor="contact"
+        sx={{
+          paddingTop: "5em",
+          marginLeft: ["5%", "10%", "15%"],
+          marginRight: ["5%", "10%", "15%"],
+        }}
+        as="form"
+        name="contact"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={e => e.preventDefault()}
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <Styled.h3 style={{ textAlign: "center" }}>
+          Would you like to learn more?
+        </Styled.h3>
+        <Styled.p style={{ textAlign: "center", marginTop: "8px" }}>
+          Leave us your contact
+        </Styled.p>
+        <Box sx={{ width: ["90%", "75%", "50%"], mx: "auto" }} mt={3}>
+          <Input placeholder="Name" name="name" mb={3} />
+          <Input placeholder="Email" type="email" name="password" mb={3} />
+        </Box>
+        <Button sx={{ mx: "auto", display: "block" }}>Submit</Button>
+        <Styled.p style={{ textAlign: "center", marginTop: "24px" }}>
+          or use
+        </Styled.p>
+        <Styled.a
+          style={{
+            textAlign: "center",
+            display: "block",
+            marginRight: "auto",
+            marginLeft: "auto",
+            marginTop: "16px",
+          }}
+          href="mailto:fotosmil.trondheim@gmail.com?subject=Info about Photo Booth"
+        >
+          fotosmil.trondheim@gmail.com
+        </Styled.a>
+        <Styled.a
+          style={{
+            textAlign: "center",
+            display: "block",
+            marginRight: "auto",
+            marginLeft: "auto",
+            marginTop: "16px",
+          }}
+          href="tel:+47 92125656"
+        >
+          +47 92125656
+        </Styled.a>
+      </Box>
+
       <Box
         sx={{
           marginTop: "5em",
@@ -264,15 +319,17 @@ const BlogIndex = ({ data, location }) => {
       >
         <footer>
           <Styled.p style={{ marginTop: "8px", textAlign: "center" }}>
-            FotoSmil Trondheim © {new Date().getFullYear()} Made with ♥ in Trondheim
+            Made with ♥ in Trondheim by{" "}
+            <Styled.a href="https://kodesmil.com">KodeSmil</Styled.a>
           </Styled.p>
         </footer>
       </Box>
       <Grid
         gap="0"
-        columns={[2, 3, 3,6]}
+        columns={[2, 3, 3, 6]}
         sx={{
           background: "white",
+          boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
         }}
       >
         {data.parties.nodes.map(logo => (

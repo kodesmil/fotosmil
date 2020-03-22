@@ -867,7 +867,7 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.2.0":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.2.0", "@babel/runtime@^7.6.3":
   version "7.9.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.2.tgz#d90df0583a3a252f09aaa619665367bae518db06"
   integrity sha512-NE2DtOdufG7R5vnfQUTehdTfNycfUANEtCa9PssN9O/xmTzP4E08UI797ixaei6hBEVL9BI/PsdJS5x7mWoB9Q==
@@ -6265,6 +6265,13 @@ gatsby-plugin-google-analytics@^2.1.38:
   dependencies:
     "@babel/runtime" "^7.8.7"
 
+gatsby-plugin-hubspot@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-hubspot/-/gatsby-plugin-hubspot-1.3.3.tgz#b5bfe1eefcf71d3e8edd31d72d0749ab9db68528"
+  integrity sha512-zsbx0folEzX1kVexN9mmLihmIh24K35+WqBcJmNctxPs8EGydqivg3g3WkB2Gpcta8FM+RhLfugFeHdhb1aPHw==
+  dependencies:
+    "@babel/runtime" "^7.6.3"
+
 gatsby-plugin-manifest@^2.2.48:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.3.1.tgz#3e36b99eb0e90feb57b5c57f7e8283a075b22263"
@@ -6470,6 +6477,14 @@ gatsby-source-filesystem@^2.1.56:
     read-chunk "^3.2.0"
     valid-url "^1.0.9"
     xstate "^4.8.0"
+
+gatsby-source-hubspot@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-source-hubspot/-/gatsby-source-hubspot-2.0.3.tgz#329f6996930008c64121eb950426a949750e98e2"
+  integrity sha512-vq03kX82fmqrlAyNDgFbzFGNJqoLAzDVGUVb0TK37SBlb9aOp+DNJMthY4R12cVQO3Rw5YYa4APaLGFXtoISkQ==
+  dependencies:
+    node-fetch "^2.2.0"
+    query-string "^6.1.0"
 
 gatsby-telemetry@^1.2.0:
   version "1.2.0"
@@ -10194,7 +10209,7 @@ node-fetch@2.1.2:
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.1.2.tgz#ab884e8e7e57e38a944753cec706f788d1768bb5"
   integrity sha1-q4hOjn5X44qUR1POxwb3iNF2i7U=
 
-node-fetch@2.6.0, node-fetch@^2.6.0:
+node-fetch@2.6.0, node-fetch@^2.2.0, node-fetch@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
   integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
@@ -11899,7 +11914,7 @@ query-string@^5.0.1:
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
 
-query-string@^6.11.1:
+query-string@^6.1.0, query-string@^6.11.1:
   version "6.11.1"
   resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.11.1.tgz#ab021f275d463ce1b61e88f0ce6988b3e8fe7c2c"
   integrity sha512-1ZvJOUl8ifkkBxu2ByVM/8GijMIPx+cef7u3yroO3Ogm4DOdZcF5dcrWTIlSHe3Pg/mtlt6/eFjObDfJureZZA==

@@ -4,8 +4,8 @@ module.exports = {
     name: `FotoSmil Trondheim`,
     siteUrl: `https://fotosmil.no`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `FotoSmil Trondheim`,
+      summary: `Photobooth for events, parties, weddings`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
@@ -125,6 +125,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-plugin-hubspot",
+      options: {
+          trackingCode: "7020884",
+          respectDNT: true,
+          productionOnly: false,
+      },
+    },
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-netlify-cms`,
