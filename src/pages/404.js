@@ -1,21 +1,28 @@
-import React from "react";
+import React from "react"
+import { graphql } from "gatsby"
 
-import Layout from "@narative/gatsby-theme-novela/src/components/Layout";
-import Section from "@narative/gatsby-theme-novela/src/components/Section";
-import SEO from "@narative/gatsby-theme-novela/src/components/SEO";
-import Headings from "@narative/gatsby-theme-novela/src/components/Headings";
+import SEO from "../components/seo"
 
-function NotFoundPage() {
+const NotFoundPage = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata.title
+
   return (
-    <Layout>
-      <SEO />
-      <Section>
-        <div style={{ marginTop: "100px" }}>
-          <Headings.h1>404: Page Not Found</Headings.h1>
-        </div>
-      </Section>
-    </Layout>
-  );
+    <div>
+      <SEO title="404: Not Found" />
+      <h1>Not Found</h1>
+      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    </div>
+  )
 }
 
-export default NotFoundPage;
+export default NotFoundPage
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
