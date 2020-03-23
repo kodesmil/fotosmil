@@ -1,6 +1,6 @@
 import React, { Children } from "react"
 import { Link, graphql } from "gatsby"
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade"
 
 import SEO from "../components/seo"
 import {
@@ -165,34 +165,37 @@ class FsSmile extends React.Component {
 class FsContact extends React.Component {
   render() {
     return (
-      <Box
-        anchor="contact"
-        sx={{
-          paddingTop: "5em",
-          marginLeft: ["5%", "10%", "15%"],
-          marginRight: ["5%", "10%", "15%"],
-        }}
-        id="contact"
-        as="form"
-        method="post"
-        name="contact"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
-        <input type="hidden" name="bot-field" />
-        <Styled.h3 style={{ textAlign: "center" }}>
-          Would you like to learn more?
-        </Styled.h3>
-        <Styled.p style={{ textAlign: "center", marginTop: "8px" }}>
-          Leave us your contact
-        </Styled.p>
-        <Box sx={{ width: ["90%", "75%", "50%"], mx: "auto" }} mt={3}>
-          <Input placeholder="Name" name="name" mb={3} />
-          <Input placeholder="Email" type="email" name="password" mb={3} />
-        </Box>
-        <Button type="submit" sx={{ mx: "auto", display: "block" }}>
-          Submit
-        </Button>
+<form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+
+  <input type="hidden" name="form-name" value="contact" />
+        <p>
+          <label>
+            Your Name: <input type="text" name="name" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Your Email: <input type="email" name="email" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Your Role:{" "}
+            <select name="role[]" multiple>
+              <option value="leader">Leader</option>
+              <option value="follower">Follower</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label>
+            Message: <textarea name="message"></textarea>
+          </label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+
         <Styled.p style={{ textAlign: "center", marginTop: "24px" }}>
           or use
         </Styled.p>
@@ -220,7 +223,7 @@ class FsContact extends React.Component {
         >
           +47 92125656
         </Styled.a>
-      </Box>
+      </form>
     )
   }
 }
