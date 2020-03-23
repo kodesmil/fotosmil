@@ -1,14 +1,8 @@
-import React from "react";
-import { TransitionProvider, TransitionViews } from "gatsby-plugin-transitions";
+import React from "react"
+import { TransitionProvider, TransitionViews } from "gatsby-plugin-transitions"
 
 const Layout = ({ location, children }) => {
-  return (
-    <TransitionProvider location={location}>
-      <TransitionViews>
-        {children}
-      </TransitionViews>
-    </TransitionProvider>
-  );
-};
+  return <div location={location}>{children}</div>
+}
 
-export default Layout;
+export default Layout

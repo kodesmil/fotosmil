@@ -115,23 +115,23 @@ class FsOffer extends React.Component {
         </Styled.h3>
         <Grid
           sx={{
-            marginLeft: ["2%", "5%"],
-            marginRight: ["2%", "5%"],
+            marginLeft: ["2%"],
+            marginRight: ["2%"],
             marginTop: ["3em"],
           }}
           gap="3em"
-          columns={[1, 1, 2, 2, 3]}
+          columns={[1, 1, 2, 3]}
         >
           {this.props.features.map(feature => (
-            <Fade>
-              <Box
-                sx={{
-                  padding: "1.5em",
-                  borderRadius: "1em",
-                  background: "white",
-                  boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
-                }}
-              >
+            <Box
+              sx={{
+                padding: "1.5em",
+                borderRadius: "1em",
+                background: "white",
+                boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
+              }}
+            >
+              <Fade>
                 <Flex
                   sx={{
                     marginBottom: "1em",
@@ -141,9 +141,10 @@ class FsOffer extends React.Component {
                   {renderLogo(feature.logo)}
                   <Styled.h4>{feature.heading}</Styled.h4>
                 </Flex>
+
                 <Styled.p>{feature.description}</Styled.p>
-              </Box>
-            </Fade>
+              </Fade>
+            </Box>
           ))}
         </Grid>
       </Box>
@@ -334,36 +335,35 @@ class FsPictures extends React.Component {
 }
 class FsPosts extends React.Component {
   render() {
-    return <div />
-    /*       {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <Box
-            sx={{
-              marginLeft: ["5%", "10%", "15%"],
-              marginRight: ["5%", "10%", "15%"],
-            }}
-          >
-            <article key={node.fields.slug}>
-              <header>
-                <h3>
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
-          </Box>
-        )
-      })} */
+    return this.props.posts.map(({ node }) => {
+      const title = node.frontmatter.title || node.fields.slug
+      return (
+        <Box
+          sx={{
+            marginLeft: ["5%", "10%", "15%"],
+            marginRight: ["5%", "10%", "15%"],
+          }}
+        >
+          <article key={node.fields.slug}>
+            <header>
+              <h3>
+                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                  {title}
+                </Link>
+              </h3>
+              <small>{node.frontmatter.date}</small>
+            </header>
+            <section>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: node.frontmatter.description || node.excerpt,
+                }}
+              />
+            </section>
+          </article>
+        </Box>
+      )
+    })
   }
 }
 
