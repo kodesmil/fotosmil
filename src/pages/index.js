@@ -19,7 +19,7 @@ import WholeYear from "../../content/assets/svg/WholeYear.svg"
 import Polaroid from "../../content/assets/svg/Polaroid.svg"
 import OnTheWay from "../../content/assets/svg/OnTheWay.svg"
 
-class HeaderSection extends React.Component {
+class FsTobBar extends React.Component {
   render() {
     return (
       <Flex
@@ -33,7 +33,7 @@ class HeaderSection extends React.Component {
           position: `fixed`,
           background: `white`,
           zIndex: `100000`,
-          borderBottom: `2px purple solid`,
+          boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
         }}
         as="nav"
       >
@@ -42,48 +42,9 @@ class HeaderSection extends React.Component {
     )
   }
 }
-class BodySection extends React.Component {
+class FsHeader extends React.Component {
   render() {
     return (
-      <Flex
-        sx={{
-          paddingLeft: ["5%", "10%", "15%"],
-          paddingRight: ["5%", "10%", "15%"],
-          alignItems: "baseline",
-          paddingTop: `1rem`,
-          width: `100%`,
-          paddingBottom: `0.5rem`,
-          position: `fixed`,
-          background: `white`,
-          zIndex: `100000`,
-          borderBottom: `2px orange solid`,
-        }}
-        as="nav"
-      >
-        {this.props.children}
-      </Flex>
-    )
-  }
-}
-
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-  const features = data.site.siteMetadata.features
-  const posts = data.allMarkdownRemark.edges
-  return (
-    <div>
-      <HeaderSection>
-        <NavLink as="h1" href="#!">
-          FotoSmil Trondheim
-        </NavLink>
-        <div style={{ flex: "auto" }}></div>
-        <NavLink href="#contact" p={2}>
-          Contact
-        </NavLink>
-        <NavLink href="#contact" p={2}>
-          Blog
-        </NavLink>
-      </HeaderSection>
       <Box
         sx={{
           position: "relative",
@@ -98,7 +59,7 @@ const BlogIndex = ({ data, location }) => {
             maxHeight: "800px",
             filter: "grayscale(25%)",
           }}
-          fluid={data.background.childImageSharp.fluid}
+          fluid={this.props.background.childImageSharp.fluid}
           alt=""
         />
         <Box
@@ -127,6 +88,13 @@ const BlogIndex = ({ data, location }) => {
           </Styled.h3>
         </Box>
       </Box>
+    )
+  }
+}
+class FsOffer extends React.Component {
+
+  render() {
+    return (
       <Box
         sx={{
           marginTop: "4em",
@@ -150,7 +118,7 @@ const BlogIndex = ({ data, location }) => {
           gap="3em"
           columns={[1, 1, 2, 2, 3]}
         >
-          {features.map(feature => (
+          {this.props.features.map(feature => (
             <Box
               sx={{
                 padding: "1.5em",
@@ -173,88 +141,24 @@ const BlogIndex = ({ data, location }) => {
           ))}
         </Grid>
       </Box>
+    )
+  }
+}
+class FsSmile extends React.Component {
+  render() {
+    return (
       <Box sx={{ marginTop: "5em" }}>
         <Styled.h1 style={{ textAlign: "center" }}> 🥳</Styled.h1>
         <Styled.p style={{ marginTop: "8px", textAlign: "center" }}>
           We made <b>4000+</b> people smiling!
         </Styled.p>
       </Box>
-      <Box
-        sx={{
-          marginTop: "5em",
-          marginLeft: ["5%", "10%", "15%"],
-          marginRight: ["5%", "10%", "15%"],
-        }}
-      >
-        <Styled.h3
-          style={{
-            textAlign: "center",
-          }}
-        >
-          How much does it cost?
-        </Styled.h3>
-        <Styled.p style={{ marginTop: "8px", textAlign: "center" }}>
-          Only 3000 NOK/h for first 2 hours and 1000 NOK/h next ones
-        </Styled.p>
-      </Box>
-      <SEO title="All posts" />
-      <Grid
-        gap="2em"
-        columns={[5]}
-        sx={{
-          marginTop: "5em",
-          alignItems: "center",
-          alignContent: "center",
-          background: "white",
-          padding: "1em",
-          boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
-        }}
-      >
-        {data.logos.nodes.map(logo => (
-          <Box>
-            <Img
-              style={{ maxHeight: "100px" }}
-              imgStyle={{
-                filter: "grayscale(25%)",
-                maxHeight: "100px",
-                objectFit: "contain"
-              }}
-              fluid={logo.childImageSharp.fluid}
-              alt=""
-            />
-          </Box>
-        ))}
-      </Grid>
-      {/*       {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <Box
-            sx={{
-              marginLeft: ["5%", "10%", "15%"],
-              marginRight: ["5%", "10%", "15%"],
-            }}
-          >
-            <article key={node.fields.slug}>
-              <header>
-                <h3>
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
-          </Box>
-        )
-      })} */}
-
+    )
+  }
+}
+class FsContact extends React.Component {
+  render() {
+    return (
       <Box
         anchor="contact"
         sx={{
@@ -308,7 +212,45 @@ const BlogIndex = ({ data, location }) => {
           +47 92125656
         </Styled.a>
       </Box>
-
+    )
+  }
+}
+class FsLogos extends React.Component {
+  render() {
+    return (
+      <Grid
+        gap="2em"
+        columns={[5]}
+        sx={{
+          marginTop: "5em",
+          alignItems: "center",
+          alignContent: "center",
+          background: "white",
+          padding: "1em",
+          boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
+        }}
+      >
+        {this.props.logos.nodes.map(logo => (
+          <Box>
+            <Img
+              style={{ maxHeight: "100px" }}
+              imgStyle={{
+                filter: "grayscale(25%)",
+                maxHeight: "100px",
+                objectFit: "contain",
+              }}
+              fluid={logo.childImageSharp.fluid}
+              alt=""
+            />
+          </Box>
+        ))}
+      </Grid>
+    )
+  }
+}
+class FsFooter extends React.Component {
+  render() {
+    return (
       <Box
         sx={{
           marginTop: "5em",
@@ -324,6 +266,36 @@ const BlogIndex = ({ data, location }) => {
           </Styled.p>
         </footer>
       </Box>
+    )
+  }
+}
+class FsPricing extends React.Component {
+  render() {
+    return (
+      <Box
+        sx={{
+          marginTop: "5em",
+          marginLeft: ["5%", "10%", "15%"],
+          marginRight: ["5%", "10%", "15%"],
+        }}
+      >
+        <Styled.h3
+          style={{
+            textAlign: "center",
+          }}
+        >
+          How much does it cost?
+        </Styled.h3>
+        <Styled.p style={{ marginTop: "8px", textAlign: "center" }}>
+          Only 3000 NOK/h for first 2 hours and 1000 NOK/h next ones
+        </Styled.p>
+      </Box>
+    )
+  }
+}
+class FsPictures extends React.Component {
+  render() {
+    return (
       <Grid
         gap="0"
         columns={[2, 3, 3, 6]}
@@ -332,7 +304,7 @@ const BlogIndex = ({ data, location }) => {
           boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
         }}
       >
-        {data.parties.nodes.map(logo => (
+        {this.props.pictures.nodes.map(picture => (
           <Img
             style={{
               height: "200px",
@@ -342,20 +314,84 @@ const BlogIndex = ({ data, location }) => {
               objectFit: "cover",
               height: "200px",
             }}
-            fluid={logo.childImageSharp.fluid}
+            fluid={picture.childImageSharp.fluid}
             alt=""
           />
         ))}
       </Grid>
+    )
+  }
+}
+class FsPosts extends React.Component {
+  render() {
+    return <div />
+    /*       {posts.map(({ node }) => {
+        const title = node.frontmatter.title || node.fields.slug
+        return (
+          <Box
+            sx={{
+              marginLeft: ["5%", "10%", "15%"],
+              marginRight: ["5%", "10%", "15%"],
+            }}
+          >
+            <article key={node.fields.slug}>
+              <header>
+                <h3>
+                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                    {title}
+                  </Link>
+                </h3>
+                <small>{node.frontmatter.date}</small>
+              </header>
+              <section>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: node.frontmatter.description || node.excerpt,
+                  }}
+                />
+              </section>
+            </article>
+          </Box>
+        )
+      })} */
+  }
+}
+
+const BlogIndex = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata.title
+  const posts = data.allMarkdownRemark.edges
+  return (
+    <div>
+      <FsTobBar>
+        <NavLink as="h1" href="#!">
+          FotoSmil Trondheim
+        </NavLink>
+        <div style={{ flex: "auto" }}></div>
+        <NavLink href="#contact" p={2}>
+          Contact
+        </NavLink>
+        <NavLink href="#contact" p={2}>
+          Blog
+        </NavLink>
+      </FsTobBar>
+      <FsHeader background={data.background} />
+      <FsOffer features={data.site.siteMetadata.features}/>
+      <FsContact />
+      <FsPricing />
+      <FsPosts />
+      <FsLogos logos={data.logos} />
+      <FsFooter />
+      <FsPictures pictures={data.pictures} />
+      <SEO title="All posts" />
     </div>
   )
 }
 
 function renderLogo(logo) {
   const style = {
-    height: "80px",
-    width: "80px",
-    minWidth: "80px",
+    height: "100px",
+    width: "100px",
+    minWidth: "100px",
     marginRight: "1.5em",
   }
   switch (logo) {
@@ -402,7 +438,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    parties: allFile(filter: { relativePath: { regex: "/parties//" } }) {
+    pictures: allFile(filter: { relativePath: { regex: "/parties//" } }) {
       nodes {
         childImageSharp {
           fluid {
