@@ -1,5 +1,6 @@
 import React, { Children } from "react"
 import { Link, graphql } from "gatsby"
+import Fade from 'react-reveal/Fade';
 
 import SEO from "../components/seo"
 import {
@@ -56,7 +57,7 @@ class FsHeader extends React.Component {
         <Img
           sx={{}}
           style={{
-            minHeight: "500px"
+            minHeight: "500px",
           }}
           imgStyle={{
             minHeight: "500px",
@@ -96,7 +97,6 @@ class FsHeader extends React.Component {
   }
 }
 class FsOffer extends React.Component {
-
   render() {
     return (
       <Box
@@ -123,25 +123,27 @@ class FsOffer extends React.Component {
           columns={[1, 1, 2, 2, 3]}
         >
           {this.props.features.map(feature => (
-            <Box
-              sx={{
-                padding: "1.5em",
-                borderRadius: "1em",
-                background: "white",
-                boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
-              }}
-            >
-              <Flex
+            <Fade>
+              <Box
                 sx={{
-                  marginBottom: "1em",
-                  alignItems: "center",
+                  padding: "1.5em",
+                  borderRadius: "1em",
+                  background: "white",
+                  boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
                 }}
               >
-                {renderLogo(feature.logo)}
-                <Styled.h4>{feature.heading}</Styled.h4>
-              </Flex>
-              <Styled.p>{feature.description}</Styled.p>
-            </Box>
+                <Flex
+                  sx={{
+                    marginBottom: "1em",
+                    alignItems: "center",
+                  }}
+                >
+                  {renderLogo(feature.logo)}
+                  <Styled.h4>{feature.heading}</Styled.h4>
+                </Flex>
+                <Styled.p>{feature.description}</Styled.p>
+              </Box>
+            </Fade>
           ))}
         </Grid>
       </Box>
@@ -188,7 +190,9 @@ class FsContact extends React.Component {
           <Input placeholder="Name" name="name" mb={3} />
           <Input placeholder="Email" type="email" name="password" mb={3} />
         </Box>
-        <Button type="submit" sx={{ mx: "auto", display: "block" }}>Submit</Button>
+        <Button type="submit" sx={{ mx: "auto", display: "block" }}>
+          Submit
+        </Button>
         <Styled.p style={{ textAlign: "center", marginTop: "24px" }}>
           or use
         </Styled.p>
@@ -364,10 +368,9 @@ class FsPosts extends React.Component {
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
   return (
     <div>
-      <SEO title="All posts" />
+      <SEO title={siteTitle} />
       <FsTobBar>
         <NavLink as="h1" href="#!">
           FotoSmil Trondheim
@@ -381,14 +384,16 @@ const BlogIndex = ({ data, location }) => {
         </NavLink>
       </FsTobBar>
       <FsHeader background={data.background} />
-      <FsOffer features={data.site.siteMetadata.features}/>
-      <FsSmile />
-      <FsPricing />
-      <FsLogos logos={data.logos} />
-      <FsContact />
-      <FsPosts />
-      <FsFooter />
-      <FsPictures pictures={data.pictures} />
+      <Fade>
+        <FsOffer features={data.site.siteMetadata.features} />
+        <FsSmile />
+        <FsPricing />
+        <FsLogos logos={data.logos} />
+        <FsContact />
+        <FsPosts posts={data.allMarkdownRemark.edges} />
+        <FsFooter />
+        <FsPictures pictures={data.pictures} />
+      </Fade>
     </div>
   )
 }

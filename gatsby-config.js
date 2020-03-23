@@ -139,6 +139,5 @@ module.exports = {
       options: {
       },
     },
-    `gatsby-plugin-layout`,
   ],
 }
