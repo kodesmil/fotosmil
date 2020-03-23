@@ -362,6 +362,7 @@ const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
   return (
     <div>
+      <SEO title="All posts" />
       <FsTobBar>
         <NavLink as="h1" href="#!">
           FotoSmil Trondheim
@@ -376,13 +377,13 @@ const BlogIndex = ({ data, location }) => {
       </FsTobBar>
       <FsHeader background={data.background} />
       <FsOffer features={data.site.siteMetadata.features}/>
-      <FsContact />
+      <FsSmile />
       <FsPricing />
-      <FsPosts />
       <FsLogos logos={data.logos} />
+      <FsContact />
+      <FsPosts />
       <FsFooter />
       <FsPictures pictures={data.pictures} />
-      <SEO title="All posts" />
     </div>
   )
 }
