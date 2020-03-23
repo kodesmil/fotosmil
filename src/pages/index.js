@@ -55,7 +55,11 @@ class FsHeader extends React.Component {
       >
         <Img
           sx={{}}
+          style={{
+            minHeight: "500px"
+          }}
           imgStyle={{
+            minHeight: "500px",
             maxHeight: "800px",
             filter: "grayscale(25%)",
           }}
@@ -172,7 +176,7 @@ class FsContact extends React.Component {
         data-netlify-honeypot="bot-field"
         onSubmit={e => e.preventDefault()}
       >
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="contact" value="contact" />
         <Styled.h3 style={{ textAlign: "center" }}>
           Would you like to learn more?
         </Styled.h3>
@@ -183,7 +187,7 @@ class FsContact extends React.Component {
           <Input placeholder="Name" name="name" mb={3} />
           <Input placeholder="Email" type="email" name="password" mb={3} />
         </Box>
-        <Button sx={{ mx: "auto", display: "block" }}>Submit</Button>
+        <Button type="submit" sx={{ mx: "auto", display: "block" }}>Submit</Button>
         <Styled.p style={{ textAlign: "center", marginTop: "24px" }}>
           or use
         </Styled.p>
