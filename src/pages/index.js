@@ -391,7 +391,6 @@ const BlogIndex = ({ data, location }) => {
         <FsPricing />
         <FsLogos logos={data.logos} />
         <FsContact />
-        <FsPosts posts={data.allMarkdownRemark.edges} />
         <FsFooter />
         <FsPictures pictures={data.pictures} />
       </Fade>
