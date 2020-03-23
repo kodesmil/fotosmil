@@ -17,10 +17,8 @@ const SEO = ({ description, lang, meta, title }) => {
         site {
           siteMetadata {
             title
+            siteUrl
             description
-            social {
-              twitter
-            }
           }
         }
         picture: file(relativePath: { eq: "parties/2.jpg" }) {
@@ -50,7 +48,7 @@ const SEO = ({ description, lang, meta, title }) => {
         },
         {
           property: `og:image`,
-          content: picture.childImageSharp.fluid.src,
+          content: `${site.siteMetadata.siteUrl}${picture.childImageSharp.fluid.src}`,
         },
         {
           property: `og:title`,
@@ -67,10 +65,6 @@ const SEO = ({ description, lang, meta, title }) => {
         {
           name: `twitter:card`,
           content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.social.twitter,
         },
         {
           name: `twitter:title`,

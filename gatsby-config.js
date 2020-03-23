@@ -1,17 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `FotoSmil Trondheim`,
-    name: `FotoSmil Trondheim`,
+    title: `FotoSmil Trondheim | Photo Booth`,
+    name: `Fotoboks`,
     siteUrl: `https://fotosmil.no`,
     author: {
       name: `FotoSmil Trondheim`,
-      summary: `Photobooth for events, parties, weddings`,
+      summary: `Photo booth - fun booster and ice-breaker for events, parties, weddings`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `Fun booster and ice-breaker for events, parties, weddings`,
+    siteUrl: `https://www.fotosmil.no/`,
     features: [
       {
         heading: "Support & attendant",
@@ -115,11 +112,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `FotoSmil Trondheim - Photo Booth`,
+        short_name: `FotoSmil`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `purple`,
         display: `minimal-ui`,
         icon: `static/icons/favicon-96x96.png`,
       },
@@ -133,7 +130,7 @@ module.exports = {
           productionOnly: false,
       },
     },
-    `gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {
