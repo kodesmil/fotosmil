@@ -170,13 +170,14 @@ class FsContact extends React.Component {
           marginLeft: ["5%", "10%", "15%"],
           marginRight: ["5%", "10%", "15%"],
         }}
+        id="contact"
         as="form"
+        method="post"
         name="contact"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        onSubmit={e => e.preventDefault()}
       >
-        <input type="hidden" name="contact" value="contact" />
+        <input type="hidden" name="bot-field" />
         <Styled.h3 style={{ textAlign: "center" }}>
           Would you like to learn more?
         </Styled.h3>
