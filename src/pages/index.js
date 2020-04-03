@@ -20,7 +20,7 @@ import WholeYear from "../../content/assets/svg/WholeYear.svg"
 import Polaroid from "../../content/assets/svg/Polaroid.svg"
 import OnTheWay from "../../content/assets/svg/OnTheWay.svg"
 
-class FsTobBar extends React.Component {
+class TobBar extends React.Component {
   render() {
     return (
       <Flex
@@ -43,7 +43,7 @@ class FsTobBar extends React.Component {
     )
   }
 }
-class FsHeader extends React.Component {
+class Header extends React.Component {
   render() {
     return (
       <Box
@@ -96,7 +96,7 @@ class FsHeader extends React.Component {
     )
   }
 }
-class FsOffer extends React.Component {
+class Offer extends React.Component {
   render() {
     return (
       <Box
@@ -151,7 +151,7 @@ class FsOffer extends React.Component {
     )
   }
 }
-class FsSmile extends React.Component {
+class Smile extends React.Component {
   render() {
     return (
       <Box sx={{ marginTop: "5em" }}>
@@ -163,7 +163,7 @@ class FsSmile extends React.Component {
     )
   }
 }
-class FsContact extends React.Component {
+class Contact extends React.Component {
   render() {
     return (
       <Box
@@ -226,7 +226,7 @@ class FsContact extends React.Component {
     )
   }
 }
-class FsLogos extends React.Component {
+class Logos extends React.Component {
   render() {
     return (
       <Grid
@@ -259,7 +259,7 @@ class FsLogos extends React.Component {
     )
   }
 }
-class FsFooter extends React.Component {
+class Footer extends React.Component {
   render() {
     return (
       <Box
@@ -372,7 +372,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <div>
       <SEO title={siteTitle} />
-      <FsTobBar>
+      <TobBar>
         <NavLink as="h1" href="#!">
           FotoSmil Trondheim
         </NavLink>
@@ -383,15 +383,15 @@ const BlogIndex = ({ data, location }) => {
         <NavLink href="#contact" p={2}>
           Blog
         </NavLink>
-      </FsTobBar>
-      <FsHeader background={data.background} />
+      </TobBar>
+      <Header background={data.background} />
       <Fade>
-        <FsOffer features={data.site.siteMetadata.features} />
-        <FsSmile />
+        <Offer features={data.site.siteMetadata.features} />
+        <Smile />
         <FsPricing />
-        <FsLogos logos={data.logos} />
-        <FsContact />
-        <FsFooter />
+        <Logos logos={data.logos} />
+        <Contact />
+        <Footer />
         <FsPictures pictures={data.pictures} />
       </Fade>
     </div>
