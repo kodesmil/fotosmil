@@ -11,7 +11,9 @@ import {
   Grid,
   Styled,
   Label,
+  Heading,
   Input,
+  Text
 } from "theme-ui"
 import Img from "gatsby-image"
 import Moments from "../../content/assets/svg/Moments.svg"
@@ -19,6 +21,7 @@ import Witch from "../../content/assets/svg/Witch.svg"
 import WholeYear from "../../content/assets/svg/WholeYear.svg"
 import Polaroid from "../../content/assets/svg/Polaroid.svg"
 import OnTheWay from "../../content/assets/svg/OnTheWay.svg"
+import { StyledBackgroundSection } from "../components/styledBackgroundSection"
 
 class FsTobBar extends React.Component {
   render() {
@@ -31,8 +34,8 @@ class FsTobBar extends React.Component {
           paddingTop: `1rem`,
           width: `100%`,
           paddingBottom: `0.5rem`,
+          background: `black`,
           position: `fixed`,
-          background: `white`,
           zIndex: `100000`,
           boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
         }}
@@ -46,53 +49,44 @@ class FsTobBar extends React.Component {
 class FsHeader extends React.Component {
   render() {
     return (
-      <Box
+      <StyledBackgroundSection
         sx={{
-          position: "relative",
-          maxHeight: "800px",
+          paddingTop: ["1em", "4em"],
           boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
         }}
-        as="section"
       >
-        <Img
-          sx={{}}
-          style={{
-            minHeight: "500px",
-          }}
-          imgStyle={{
-            minHeight: "500px",
-            maxHeight: "800px",
-            filter: "grayscale(25%)",
-          }}
-          fluid={this.props.background.childImageSharp.fluid}
-          alt=""
-        />
         <Box
           sx={{
-            position: "absolute",
-            marginLeft: ["5%", "10%", "15%"],
-            marginRight: ["5%", "10%", "15%"],
-            bottom: ["7%", "10%", "20%"],
+            width: ["90%", "80%", "70%"],
+            paddingTop: ["12em", "22em"],
+            paddingBottom: ["12em", "22em"],
+            mx: "auto",
           }}
         >
-          <Styled.h1
-            style={{
+          <Heading
+            sx={{
               color: "white",
               textShadow: " 2px 2px 10px black",
+              fontSize: ["6", "7", "8"],
+              lineHeight: 1,
+              textAlign: "center",
             }}
           >
             Proffessional Photo Booth
-          </Styled.h1>
-          <Styled.h3
-            style={{
+          </Heading>
+          <Heading
+            sx={{
               color: "white",
+              marginTop: "1em",
               textShadow: " 2px 2px 10px black",
+              fontSize: ["4", "5"],
+              textAlign: "center",
             }}
           >
-            Fun booster and ice-breaker for events, parties, weddings
-          </Styled.h3>
+            The best fun booster and ice-breaker for events, parties and weddings
+          </Heading>
         </Box>
-      </Box>
+      </StyledBackgroundSection>
     )
   }
 }
@@ -101,23 +95,24 @@ class FsOffer extends React.Component {
     return (
       <Box
         sx={{
-          marginTop: "4em",
+          marginTop: ["4em", "8em"],
           marginLeft: ["5%", "10%", "15%"],
           marginRight: ["5%", "10%", "15%"],
         }}
       >
-        <Styled.h3
-          style={{
+        <Heading
+          sx={{
             textAlign: "center",
+            fontSize: ["5", "6"],
           }}
         >
           What's in the offer?
-        </Styled.h3>
+        </Heading>
         <Grid
           sx={{
             marginLeft: ["2%"],
             marginRight: ["2%"],
-            marginTop: ["3em"],
+            marginTop: ["3em", "4em"],
           }}
           gap="3em"
           columns={[1, 1, 2, 3]}
@@ -125,10 +120,10 @@ class FsOffer extends React.Component {
           {this.props.features.map(feature => (
             <Box
               sx={{
-                padding: "1.5em",
+                padding: "2em",
                 borderRadius: "1em",
                 background: "white",
-                boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
+                boxShadow: "0px 0.5px 50px rgba(0,0,0,0.1)",
               }}
             >
               <Fade>
@@ -138,11 +133,19 @@ class FsOffer extends React.Component {
                     alignItems: "center",
                   }}
                 >
+                  <Heading
+                    sx={{
+                      fontSize: ["4"],
+                      paddingRight: "0.5em"
+                    }}>{feature.heading}</Heading>
                   {renderLogo(feature.logo)}
-                  <Styled.h4>{feature.heading}</Styled.h4>
                 </Flex>
 
-                <Styled.p>{feature.description}</Styled.p>
+                <Text
+                  sx={{
+                    fontSize: ["3"],
+                  }}
+                >{feature.description}</Text>
               </Fade>
             </Box>
           ))}
@@ -154,11 +157,20 @@ class FsOffer extends React.Component {
 class FsSmile extends React.Component {
   render() {
     return (
-      <Box sx={{ marginTop: "5em" }}>
-        <Styled.h1 style={{ textAlign: "center" }}> 🥳</Styled.h1>
-        <Styled.p style={{ marginTop: "8px", textAlign: "center" }}>
+      <Box sx={{
+        marginTop: ["4em", "8em"],
+      }}>
+        <Heading sx={{
+          fontSize: ["5", "6"],
+          textAlign: "center"
+        }}> 🥳</Heading>
+        <Text sx={{
+          marginTop: "1em",
+          textAlign: "center",
+          fontSize: ["4"],
+        }}>
           We made <b>4000+</b> people smiling!
-        </Styled.p>
+        </Text>
       </Box>
     )
   }
@@ -169,7 +181,7 @@ class FsContact extends React.Component {
       <Box
         anchor="contact"
         sx={{
-          paddingTop: "5em",
+          marginTop: ["4em", "8em"],
           marginLeft: ["5%", "10%", "15%"],
           marginRight: ["5%", "10%", "15%"],
         }}
@@ -181,12 +193,19 @@ class FsContact extends React.Component {
         data-netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="contact" />
-        <Styled.h3 style={{ textAlign: "center" }}>
+        <Heading sx={{
+          fontSize: ["4", "5"],
+          textAlign: "center"
+        }}>
           Would you like to learn more?
-        </Styled.h3>
-        <Styled.p style={{ textAlign: "center", marginTop: "8px" }}>
+        </Heading>
+        <Text sx={{
+          fontSize: ["3"],
+          textAlign: "center",
+          marginTop: "8px",
+        }}>
           Leave us your contact
-        </Styled.p>
+        </Text>
         <Box sx={{ width: ["90%", "75%", "50%"], mx: "auto" }} mt={3}>
           <Input placeholder="Name" name="name" mb={3} />
           <Input placeholder="Email" type="email" name="password" mb={3} />
@@ -195,16 +214,19 @@ class FsContact extends React.Component {
           Submit
         </Button>
 
-        <Styled.p style={{ textAlign: "center", marginTop: "24px" }}>
+        <Text sx={{
+          fontSize: ["3"],
+          textAlign: "center", marginTop: "2em"
+        }}>
           or use
-        </Styled.p>
+        </Text>
         <Styled.a
           style={{
             textAlign: "center",
             display: "block",
             marginRight: "auto",
             marginLeft: "auto",
-            marginTop: "16px",
+            marginTop: "1em",
           }}
           href="mailto:fotosmil.trondheim@gmail.com?subject=Info about Photo Booth"
         >
@@ -216,7 +238,7 @@ class FsContact extends React.Component {
             display: "block",
             marginRight: "auto",
             marginLeft: "auto",
-            marginTop: "16px",
+            marginTop: "1em",
           }}
           href="tel:+47 92125656"
         >
@@ -233,7 +255,7 @@ class FsLogos extends React.Component {
         gap="2em"
         columns={[5]}
         sx={{
-          marginTop: "5em",
+          marginTop: ["4em", "8em"],
           alignItems: "center",
           alignContent: "center",
           background: "white",
@@ -264,17 +286,17 @@ class FsFooter extends React.Component {
     return (
       <Box
         sx={{
-          marginTop: "5em",
+          marginTop: ["4em", "8em"],
           marginBottom: "1em",
           marginLeft: ["5%", "10%", "15%"],
           marginRight: ["5%", "10%", "15%"],
         }}
       >
         <footer>
-          <Styled.p style={{ marginTop: "8px", textAlign: "center" }}>
+          <Text sx={{ marginTop: "1em", fontSize: ["3"], textAlign: "center" }}>
             Made with ♥ in Trondheim by{" "}
             <Styled.a href="https://kodesmil.com">KodeSmil</Styled.a>
-          </Styled.p>
+          </Text>
         </footer>
       </Box>
     )
@@ -285,21 +307,44 @@ class FsPricing extends React.Component {
     return (
       <Box
         sx={{
-          marginTop: "5em",
+          marginTop: ["4em", "8em"],
           marginLeft: ["5%", "10%", "15%"],
           marginRight: ["5%", "10%", "15%"],
         }}
       >
-        <Styled.h3
-          style={{
+      <Heading
+        sx={{
+          fontSize: ["4", "5"],
+          textAlign: "center",
+        }}
+      >
+        Let's keep it simple – one fixed price. 
+      </Heading>
+
+      <Text sx={{
+        fontSize: ["3"],
+        marginTop: "1em",
+        textAlign: "center"
+      }}>
+        3999 NOK for the first 2 hours and then 999 NOK/h for the next ones
+      </Text>
+        <Heading
+          sx={{
+            marginTop: ["1.5em", "3em"],
+            fontSize: ["4", "5"],
             textAlign: "center",
           }}
         >
-          How much does it cost?
-        </Styled.h3>
-        <Styled.p style={{ marginTop: "8px", textAlign: "center" }}>
-          Only 3000 NOK/h for first 2 hours and 1000 NOK/h next ones
-        </Styled.p>
+Why are we cheaper than our competition?
+        </Heading>
+
+        <Text sx={{
+          fontSize: ["3"],
+          marginTop: "1em",
+          textAlign: "center"
+        }}>
+<b>Because</b> spreading smiles and good athmosphere is our mission :D
+        </Text>
       </Box>
     )
   }
@@ -333,39 +378,6 @@ class FsPictures extends React.Component {
     )
   }
 }
-class FsPosts extends React.Component {
-  render() {
-    return this.props.posts.map(({ node }) => {
-      const title = node.frontmatter.title || node.fields.slug
-      return (
-        <Box
-          sx={{
-            marginLeft: ["5%", "10%", "15%"],
-            marginRight: ["5%", "10%", "15%"],
-          }}
-        >
-          <article key={node.fields.slug}>
-            <header>
-              <h3>
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
-          </article>
-        </Box>
-      )
-    })
-  }
-}
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -373,15 +385,20 @@ const BlogIndex = ({ data, location }) => {
     <div>
       <SEO title={siteTitle} />
       <FsTobBar>
-        <NavLink as="h1" href="#!">
+        <NavLink
+          style={{
+            color: "white",
+          }}
+          as="h1" href="#!">
           FotoSmil Trondheim
         </NavLink>
         <div style={{ flex: "auto" }}></div>
-        <NavLink href="#contact" p={2}>
+        <NavLink
+          style={{
+            color: "white",
+          }}
+          href="#contact" p={2}>
           Contact
-        </NavLink>
-        <NavLink href="#contact" p={2}>
-          Blog
         </NavLink>
       </FsTobBar>
       <FsHeader background={data.background} />
@@ -433,13 +450,6 @@ export const pageQuery = graphql`
         }
       }
     }
-    background: file(relativePath: { eq: "feature.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     logos: allFile(filter: { relativePath: { regex: "/partners/logo_/" } }) {
       nodes {
         childImageSharp {
@@ -454,21 +464,6 @@ export const pageQuery = graphql`
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
           }
         }
       }

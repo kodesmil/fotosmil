@@ -23,16 +23,16 @@ module.exports = {
           "There are usually 3 or 4 photos on a single printout stripe. We will print as many as needed - with no extra cost! (during rental hours)",
       },
       {
-        heading: "Top-quality camera",
+        heading: "Top-quality service",
         logo: "polaroid",
         description:
-          "Photo booth services often use small, portable equipment with low-quality camera. Our photos are taken with a professional SLR camera to ensure the best quality for you.",
+          "Delivering best quality service is our goal. Our photos are taken with a professional SLR camera to ensure best service for you.",
       },
       {
         heading: "Vast choice of props",
         logo: "witch",
         description:
-          "You can use all of our hundreds of props and backgrounds. (we send patterns on request). What's more, client can order props dedicated for a special theme party, although this service is extra paid.",
+          "Our clients can use a full palette of hundreds of our props and choose from our backdrops (we send patterns on request). What's more, clients can order props dedicated for a special theme party, although this service is extra paid.",
       },
       {
         heading: "Delivery within Stor Trondheim",
