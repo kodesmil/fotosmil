@@ -11,8 +11,8 @@ export default {
     512
   ],
   "fonts": {
-    "body": "Poppins, sans-serif",
-    "heading": "Poppins, sans-serif",
+    "body": "Barlow, sans-serif",
+    "heading": "Barlow, sans-serif",
     "monospace": "Menlo, monospace"
   },
   "fontSizes": [
@@ -33,7 +33,7 @@ export default {
   },
   "lineHeights": {
     "body": 1.625,
-    "heading": 1.25
+    "heading": 1.1
   },
   "colors": {
     "text": "#000",

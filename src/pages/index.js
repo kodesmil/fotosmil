@@ -16,12 +16,8 @@ import {
   Text
 } from "theme-ui"
 import Img from "gatsby-image"
-import Moments from "../../content/assets/svg/Moments.svg"
-import Witch from "../../content/assets/svg/Witch.svg"
-import WholeYear from "../../content/assets/svg/WholeYear.svg"
-import Polaroid from "../../content/assets/svg/Polaroid.svg"
-import OnTheWay from "../../content/assets/svg/OnTheWay.svg"
 import { StyledBackgroundSection } from "../components/styledBackgroundSection"
+import { Offer } from "../components/offer"
 
 class FsTobBar extends React.Component {
   render() {
@@ -90,70 +86,7 @@ class FsHeader extends React.Component {
     )
   }
 }
-class FsOffer extends React.Component {
-  render() {
-    return (
-      <Box
-        sx={{
-          marginTop: ["4em", "8em"],
-          marginLeft: ["5%", "10%", "15%"],
-          marginRight: ["5%", "10%", "15%"],
-        }}
-      >
-        <Heading
-          sx={{
-            textAlign: "center",
-            fontSize: ["5", "6"],
-          }}
-        >
-          What's in the offer?
-        </Heading>
-        <Grid
-          sx={{
-            marginLeft: ["2%"],
-            marginRight: ["2%"],
-            marginTop: ["3em", "4em"],
-          }}
-          gap="3em"
-          columns={[1, 1, 2, 3]}
-        >
-          {this.props.features.map(feature => (
-            <Box
-              sx={{
-                padding: "2em",
-                borderRadius: "1em",
-                background: "white",
-                boxShadow: "0px 0.5px 50px rgba(0,0,0,0.1)",
-              }}
-            >
-              <Fade>
-                <Flex
-                  sx={{
-                    marginBottom: "1em",
-                    alignItems: "center",
-                  }}
-                >
-                  <Heading
-                    sx={{
-                      fontSize: ["4"],
-                      paddingRight: "0.5em"
-                    }}>{feature.heading}</Heading>
-                  {renderLogo(feature.logo)}
-                </Flex>
 
-                <Text
-                  sx={{
-                    fontSize: ["3"],
-                  }}
-                >{feature.description}</Text>
-              </Fade>
-            </Box>
-          ))}
-        </Grid>
-      </Box>
-    )
-  }
-}
 class FsSmile extends React.Component {
   render() {
     return (
@@ -307,48 +240,30 @@ class FsPricing extends React.Component {
     return (
       <Box
         sx={{
+          mx: "auto",
           marginTop: ["4em", "8em"],
-          marginLeft: ["5%", "10%", "15%"],
-          marginRight: ["5%", "10%", "15%"],
+          width: ["80%", "60%", "60%", "37%"],
         }}
       >
       <Heading
         sx={{
           fontSize: ["4", "5"],
-          textAlign: "center",
         }}
       >
         Let's keep it simple – one fixed price. 
       </Heading>
 
       <Text sx={{
-        fontSize: ["3"],
+        fontSize: ["2", "3"],
         marginTop: "1em",
-        textAlign: "center"
       }}>
         3999 NOK for the first 2 hours and then 999 NOK/h for the next ones
       </Text>
-        <Heading
-          sx={{
-            marginTop: ["1.5em", "3em"],
-            fontSize: ["4", "5"],
-            textAlign: "center",
-          }}
-        >
-Why are we cheaper than our competition?
-        </Heading>
-
-        <Text sx={{
-          fontSize: ["3"],
-          marginTop: "1em",
-          textAlign: "center"
-        }}>
-<b>Because</b> spreading smiles and good athmosphere is our mission :D
-        </Text>
       </Box>
     )
   }
 }
+
 class FsPictures extends React.Component {
   render() {
     return (
@@ -403,9 +318,10 @@ const BlogIndex = ({ data, location }) => {
       </FsTobBar>
       <FsHeader background={data.background} />
       <Fade>
-        <FsOffer features={data.site.siteMetadata.features} />
-        <FsSmile />
+        <FsPictures pictures={data.joana} />
+        <Offer features={data.site.siteMetadata.features}/>
         <FsPricing />
+        <FsSmile />
         <FsLogos logos={data.logos} />
         <FsContact />
         <FsFooter />
@@ -413,27 +329,6 @@ const BlogIndex = ({ data, location }) => {
       </Fade>
     </div>
   )
-}
-
-function renderLogo(logo) {
-  const style = {
-    height: "100px",
-    width: "100px",
-    minWidth: "100px",
-    marginRight: "1.5em",
-  }
-  switch (logo) {
-    case "moments":
-      return <Moments style={style} />
-    case "on-the-way":
-      return <OnTheWay style={style} />
-    case "polaroid":
-      return <Polaroid style={style} />
-    case "whole-year":
-      return <WholeYear style={style} />
-    case "witch":
-      return <Witch style={style} />
-  }
 }
 
 export default BlogIndex
@@ -460,6 +355,15 @@ export const pageQuery = graphql`
       }
     }
     pictures: allFile(filter: { relativePath: { regex: "/parties//" } }) {
+      nodes {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+    joana: allFile(filter: { relativePath: { regex: "/joana//" } }) {
       nodes {
         childImageSharp {
           fluid {
