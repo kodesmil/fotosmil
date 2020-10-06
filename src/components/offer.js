@@ -56,6 +56,7 @@ export class Offer extends React.Component {
                     <Svg logo={feature.logo}></Svg>
                   </Box>
                 </Grid>
+                
               </Box>
             </Fade>
           ))}
