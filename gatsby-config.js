@@ -2,7 +2,6 @@ module.exports = {
   siteMetadata: {
     title: `FotoSmil Trondheim | Photo Booth`,
     name: `Fotoboks`,
-    siteUrl: `https://fotosmil.no`,
     author: {
       name: `FotoSmil Trondheim`,
       summary: `Photo booth - fun booster and ice-breaker for events, parties, weddings`,
@@ -11,7 +10,7 @@ module.exports = {
     siteUrl: `https://www.fotosmil.no/`,
     features: [
       {
-        heading: "Support & attendant",
+        heading: "Technical support",
         logo: "whole-year",
         description:
           "You won't need to worry about installation of the photo booth nor about any other technical issue. Let us do it for you.",
