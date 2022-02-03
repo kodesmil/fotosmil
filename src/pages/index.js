@@ -4,32 +4,30 @@ import Fade from "react-reveal/Fade"
 
 import SEO from "../components/seo"
 import { Box, Button, Container, Flex, Grid, Heading, Input, NavLink, Styled, Text } from "theme-ui"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 import { StyledBackgroundSection } from "../components/styledBackgroundSection"
 import { Offer } from "../components/offer"
 
-class FsTobBar extends React.Component {
-  render() {
-    return (
-      <Flex
-        sx={{
-          paddingLeft: ["5%", "10%", "15%"],
-          paddingRight: ["5%", "10%", "15%"],
-          alignItems: "baseline",
-          paddingTop: `1rem`,
-          width: `100%`,
-          paddingBottom: `0.5rem`,
-          background: `black`,
-          position: `fixed`,
-          zIndex: `100000`,
-          boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
-        }}
-        as="nav"
-      >
-        {this.props.children}
-      </Flex>
-    )
-  }
+function FsTobBar(props) {
+  return (
+    <Flex
+      sx={{
+        paddingLeft: ["5%", "10%", "15%"],
+        paddingRight: ["5%", "10%", "15%"],
+        alignItems: "center",
+        py: "0.5em",
+        top: 0,
+        width: `100%`,
+        background: `black`,
+        position: `sticky`,
+        zIndex: `100000`,
+        boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
+      }}
+      as="nav"
+    >
+      {props.children}
+    </Flex>
+  )
 }
 
 function FsHeader() {
@@ -77,210 +75,202 @@ function FsHeader() {
   )
 }
 
-class FsSmile extends React.Component {
-  render() {
-    return (
-      <Box sx={{
-        marginTop: ["4em", "8em"],
-      }}>
-        <Heading sx={{
-          fontSize: ["5", "6"],
+function FsSmile() {
+  return (
+    <Box sx={{
+      marginTop: ["2em", "4em"],
+    }}>
+      <Heading sx={{
+        fontSize: ["5", "6"],
+        textAlign: "center",
+      }}> 🥳</Heading>
+      <Text
+        as={"div"}
+        sx={{
+          marginTop: "1em",
           textAlign: "center",
-        }}> 🥳</Heading>
-        <Text
-          as={"div"}
-          sx={{
-            marginTop: "1em",
-            textAlign: "center",
-            fontSize: ["4"],
-          }}>
-          We made <b>4000+</b> people smiling!
-        </Text>
-      </Box>
-    )
-  }
+          fontSize: ["4"],
+        }}>
+        We made <b>4000+</b> people smiling!
+      </Text>
+    </Box>
+  )
 }
 
-class FsInsta extends React.Component {
-  render() {
-    return (
-      <Box sx={{
-        marginTop: ["4em", "8em"],
-      }}>
-        <Text
-          as={"h3"}
-          sx={{
-            fontSize: ["4", "5"],
-            textAlign: "center",
-          }}>Meet us on Instagram!</Text>
-        <Flex
-          sx={{
-            alignItems: "center",
-            marginTop: ["2em"],
-          }}
-        >
-          <Grid
-            gap={[0, 4, 4, 4]}
-            columns={[1, 2, 2, 2]}
-            sx={{
-              marginRight: "auto", marginLeft: "auto",
-            }}
-          >
-            <iframe width="320" height="460" src="https://www.instagram.com/p/CIp6kV6JNzq/embed"
-                    frameBorder="0" />
-            <iframe width="320" height="460" src="https://www.instagram.com/p/BuEWMHjhUZv/embed"
-                    frameBorder="0" />
-          </Grid>
-        </Flex>
-      </Box>
-    )
-  }
-}
-
-
-class FsContact extends React.Component {
-  render() {
-    return (
-      <Box
-        anchor="contact"
+function FsInsta() {
+  return (
+    <Box sx={{
+      marginTop: ["4em", "6em"],
+    }}>
+      <Text
+        as={"h3"}
         sx={{
-          marginTop: ["4em", "8em"],
-          marginLeft: ["5%", "10%", "15%"],
-          marginRight: ["5%", "10%", "15%"],
-        }}
-        id="contact"
-        as="form"
-        method="post"
-        name="contact"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
-        <input type="hidden" name="form-name" value="contact" />
-        <Text
-          as={"h1"}
-          sx={{
-            fontSize: ["4", "5"],
-            textAlign: "center",
-          }}>
-          Would you like to learn more?
-        </Text>
-        <Text
-          as={"div"}
-          sx={{
-            fontSize: ["3"],
-            textAlign: "center",
-            marginTop: "8px",
-          }}>
-          Leave us your contact
-        </Text>
-        <Box sx={{ width: ["90%", "75%", "50%"], mx: "auto" }} mt={3}>
-          <Input placeholder="Name" name="name" mb={3} />
-          <Input placeholder="Email" type="email" name="password" mb={3} />
-        </Box>
-        <Button type="submit" sx={{ mx: "auto", display: "block", backgroundColor: "purple" }}>
-          Submit
-        </Button>
-
-        <Text
-          as={"div"}
-          sx={{
-            fontSize: ["3"],
-            textAlign: "center", marginTop: "2em",
-          }}>
-          or use
-        </Text>
-        <Styled.a
-          style={{
-            textAlign: "center",
-            display: "block",
-            marginRight: "auto",
-            marginLeft: "auto",
-            marginTop: "1em",
-          }}
-          href="mailto:fotosmil.trondheim@gmail.com?subject=Info about Photo Booth"
-        >
-          fotosmil.trondheim@gmail.com
-        </Styled.a>
-        <Styled.a
-          style={{
-            textAlign: "center",
-            display: "block",
-            marginRight: "auto",
-            marginLeft: "auto",
-            marginTop: "1em",
-          }}
-          href="tel:+47 92125656"
-        >
-          +47 92125656
-        </Styled.a>
-      </Box>
-    )
-  }
-}
-
-class FsLogos extends React.Component {
-  render() {
-    return (
-      <Grid
-        gap="2em"
-        columns={[5]}
+          fontSize: ["4", "5"],
+          textAlign: "center",
+        }}>Meet us on Instagram!</Text>
+      <Flex
         sx={{
-          marginTop: ["4em", "8em"],
           alignItems: "center",
-          alignContent: "center",
-          background: "white",
-          paddingX: ["1em", "4em", "8em"],
-          paddingY: ["1em"],
-          boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
+          marginTop: ["2em"],
         }}
       >
-        {this.props.logos.nodes.map((logo, i) => (
-          <GatsbyImage
-            key={i}
-            imgStyle={{
-              objectFit: "contain",
-            }}
-            image={logo.childImageSharp.gatsbyImageData}
-            alt=""
-          />
-        ))}
-      </Grid>
-    )
-  }
+        <Grid
+          gap={[0, 4, 4, 4]}
+          columns={[1, 2, 2, 2]}
+          sx={{
+            marginRight: "auto", marginLeft: "auto",
+          }}
+        >
+          <iframe width="320" height="460" src="https://www.instagram.com/p/CIp6kV6JNzq/embed"
+                  frameBorder="0" />
+          <iframe width="320" height="460" src="https://www.instagram.com/p/BuEWMHjhUZv/embed"
+                  frameBorder="0" />
+        </Grid>
+      </Flex>
+    </Box>
+  )
 }
 
-class FsFooter extends React.Component {
-  render() {
-    return (
-      <Box
+
+function FsContact() {
+  return (
+    <Box
+      anchor="contact"
+      sx={{
+        marginTop: ["4em", "8em"],
+        marginLeft: ["5%", "10%", "15%"],
+        marginRight: ["5%", "10%", "15%"],
+      }}
+      id="contact"
+      as="form"
+      method="post"
+      name="contact"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <Text
+        as={"h1"}
         sx={{
-          marginTop: ["4em", "8em"],
-          marginBottom: "1em",
-        }}
-      >
-        <Container>
-          <Text
-            as={"div"}
-            sx={{
-              marginTop: "1em",
-              fontSize: ["3"],
-              textAlign: "center",
-            }}>
-            Made with ♥ in Trondheim by{" "}
-            <Styled.a href="https://kodesmil.com">KodeSmil</Styled.a>
-          </Text>
-        </Container>
+          fontSize: ["4", "5"],
+          textAlign: "center",
+        }}>
+        Would you like to learn more?
+      </Text>
+      <Text
+        as={"div"}
+        sx={{
+          fontSize: ["3"],
+          textAlign: "center",
+          marginTop: "8px",
+        }}>
+        Leave us your contact
+      </Text>
+      <Box sx={{ width: ["90%", "75%", "50%"], mx: "auto" }} mt={3}>
+        <Input placeholder="Name" name="name" mb={3} />
+        <Input placeholder="Email" type="email" name="password" mb={3} />
       </Box>
-    )
-  }
+      <Button type="submit" sx={{ mx: "auto", display: "block", backgroundColor: "purple" }}>
+        Submit
+      </Button>
+
+      <Text
+        as={"div"}
+        sx={{
+          fontSize: ["3"],
+          textAlign: "center", marginTop: "2em",
+        }}>
+        or use
+      </Text>
+      <Styled.a
+        style={{
+          textAlign: "center",
+          display: "block",
+          marginRight: "auto",
+          marginLeft: "auto",
+          marginTop: "1em",
+        }}
+        href="mailto:fotosmil.trondheim@gmail.com?subject=Info about Photo Booth"
+      >
+        fotosmil.trondheim@gmail.com
+      </Styled.a>
+      <Styled.a
+        style={{
+          textAlign: "center",
+          display: "block",
+          marginRight: "auto",
+          marginLeft: "auto",
+          marginTop: "1em",
+        }}
+        href="tel:+47 92125656"
+      >
+        +47 92125656
+      </Styled.a>
+    </Box>
+  )
+}
+
+function FsLogos(props) {
+  return (
+    <Grid
+      gap="2em"
+      columns={[5]}
+      sx={{
+        marginTop: ["4em", "8em"],
+        alignItems: "center",
+        alignContent: "center",
+        background: "white",
+        paddingX: ["1em", "4em", "8em"],
+        paddingY: ["1em"],
+        boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
+      }}
+    >
+      {props.logos.nodes.map((logo, i) => (
+        <GatsbyImage
+          key={i}
+          imgStyle={{
+            objectFit: "contain",
+          }}
+          image={logo.childImageSharp.gatsbyImageData}
+          alt=""
+        />
+      ))}
+    </Grid>
+  )
+}
+
+function FsFooter() {
+  return (
+    <Box
+      sx={{
+        marginTop: ["4em", "8em"],
+        marginBottom: "1em",
+      }}
+    >
+      <Container>
+        <Text
+          as={"div"}
+          sx={{
+            marginTop: "1em",
+            fontSize: ["3"],
+            textAlign: "center",
+          }}>
+          Made with ♥ in Trondheim by{" "}
+          <Styled.a href="https://kodesmil.com">Kodesmil</Styled.a>
+        </Text>
+      </Container>
+    </Box>
+  )
 }
 
 function FsPricing() {
   return (
     <Box
+      id="pricing"
+      anchor="pricing"
       sx={{
         mx: "auto",
-        marginTop: ["4em", "8em"],
+        paddingTop: ["4em", "8em"],
         width: ["80%", "60%", "60%", "37%"],
       }}
     >
@@ -301,7 +291,7 @@ function FsPricing() {
             marginTop: "1em",
             textAlign: "center",
           }}>
-          kr 3770,- for the first 2 hours and then kr 730,-/h for the next ones
+          kr 3770,- for the first 2 hours and then kr 730,- per hour for the next ones
         </Text>
         <Text
           as={"div"}
@@ -367,19 +357,33 @@ const BlogIndex = ({ data, location }) => {
     <div>
       <SEO title={siteTitle} />
       <FsTobBar>
+        <StaticImage
+          width={72}
+          src="./logo.png"
+          alt="Fotosmil Trondheim"
+        />
         <NavLink
-          style={{
+          sx={{
             color: "white",
+            marginLeft: ["1em", "2em", "3em"],
           }}
-          as="h1" href="#!">
-          FotoSmil Trondheim
+          href="#offer">
+          Offer
         </NavLink>
-        <div style={{ flex: "auto" }} />
         <NavLink
-          style={{
+          sx={{
             color: "white",
+            marginLeft: ["1em", "2em", "3em"],
           }}
-          href="#contact" p={2}>
+          href="#pricing">
+          Pricing
+        </NavLink>
+        <NavLink
+          sx={{
+            color: "white",
+            marginLeft: ["1em", "2em", "3em"],
+          }}
+          href="#contact">
           Contact
         </NavLink>
       </FsTobBar>
