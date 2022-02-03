@@ -21,11 +21,9 @@ const SEO = ({ description, lang, meta, title }) => {
             description
           }
         }
-        picture: file(relativePath: { eq: "parties/2.jpg" }) {
+        picture: file(relativePath: { eq: "parties/5.jpg" }) {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+              gatsbyImageData(layout: FIXED)
           }
         }
       }
@@ -48,7 +46,7 @@ const SEO = ({ description, lang, meta, title }) => {
         },
         {
           property: `og:image`,
-          content: `${site.siteMetadata.siteUrl}${picture.childImageSharp.fluid.src}`,
+          content: `${site.siteMetadata.siteUrl}${picture.childImageSharp.gatsbyImageData}`,
         },
         {
           property: `og:title`,
