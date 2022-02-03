@@ -67,5 +67,10 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "deps:update": "npm-check-updates --configFileName ncurc.yml -u --deep --dep prod,dev,optional"
+  },
+  "engines": {
+    "node": ">=14",
+    "yarn": ">=1.22.0",
+    "npm": "please-use-yarn"
   }
 }
