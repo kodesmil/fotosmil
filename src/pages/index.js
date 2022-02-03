@@ -13,7 +13,7 @@ import {
   Label,
   Heading,
   Input,
-  Text
+  Text,
 } from "theme-ui"
 import Img from "gatsby-image"
 import Moments from "../../content/assets/svg/Moments.svg"
@@ -46,6 +46,7 @@ class FsTobBar extends React.Component {
     )
   }
 }
+
 class FsHeader extends React.Component {
   render() {
     return (
@@ -72,7 +73,7 @@ class FsHeader extends React.Component {
               textAlign: "center",
             }}
           >
-            Proffessional Photo Booth
+            Professional Photo Booth
           </Heading>
           <Heading
             sx={{
@@ -90,6 +91,7 @@ class FsHeader extends React.Component {
     )
   }
 }
+
 class FsOffer extends React.Component {
   render() {
     return (
@@ -136,7 +138,7 @@ class FsOffer extends React.Component {
                   <Heading
                     sx={{
                       fontSize: ["4"],
-                      paddingRight: "0.5em"
+                      paddingRight: "0.5em",
                     }}>{feature.heading}</Heading>
                   {renderLogo(feature.logo)}
                 </Flex>
@@ -154,6 +156,7 @@ class FsOffer extends React.Component {
     )
   }
 }
+
 class FsSmile extends React.Component {
   render() {
     return (
@@ -162,7 +165,7 @@ class FsSmile extends React.Component {
       }}>
         <Heading sx={{
           fontSize: ["5", "6"],
-          textAlign: "center"
+          textAlign: "center",
         }}> 🥳</Heading>
         <Text sx={{
           marginTop: "1em",
@@ -175,6 +178,42 @@ class FsSmile extends React.Component {
     )
   }
 }
+
+class FsInsta extends React.Component {
+  render() {
+    return (
+      <Box sx={{
+        marginTop: ["4em", "8em"],
+      }}>
+        <Heading sx={{
+          fontSize: ["4", "5"],
+          textAlign: "center",
+        }}>Meet us on Instagram!</Heading>
+        <Flex
+          sx={{
+            alignItems: "center",
+            marginTop: ["1em"],
+          }}
+        >
+          <Grid
+            gap={[0, 4, 4, 4]}
+            columns={[1, 2, 2, 2]}
+            sx={{
+              marginRight: "auto", marginLeft: "auto",
+            }}
+          >
+            <iframe width="320" height="460" src="https://www.instagram.com/p/CIp6kV6JNzq/embed"
+                    frameBorder="0" />
+            <iframe width="320" height="460" src="https://www.instagram.com/p/BuEWMHjhUZv/embed"
+                    frameBorder="0" />
+          </Grid>
+        </Flex>
+      </Box>
+    )
+  }
+}
+
+
 class FsContact extends React.Component {
   render() {
     return (
@@ -195,7 +234,7 @@ class FsContact extends React.Component {
         <input type="hidden" name="form-name" value="contact" />
         <Heading sx={{
           fontSize: ["4", "5"],
-          textAlign: "center"
+          textAlign: "center",
         }}>
           Would you like to learn more?
         </Heading>
@@ -216,7 +255,7 @@ class FsContact extends React.Component {
 
         <Text sx={{
           fontSize: ["3"],
-          textAlign: "center", marginTop: "2em"
+          textAlign: "center", marginTop: "2em",
         }}>
           or use
         </Text>
@@ -248,6 +287,7 @@ class FsContact extends React.Component {
     )
   }
 }
+
 class FsLogos extends React.Component {
   render() {
     return (
@@ -281,6 +321,7 @@ class FsLogos extends React.Component {
     )
   }
 }
+
 class FsFooter extends React.Component {
   render() {
     return (
@@ -302,6 +343,7 @@ class FsFooter extends React.Component {
     )
   }
 }
+
 class FsPricing extends React.Component {
   render() {
     return (
@@ -312,22 +354,30 @@ class FsPricing extends React.Component {
           marginRight: ["5%", "10%", "15%"],
         }}
       >
-      <Heading
-        sx={{
-          fontSize: ["4", "5"],
-          textAlign: "center",
-        }}
-      >
-        Let's keep it simple – one fixed price. 
-      </Heading>
-
-      <Text sx={{
-        fontSize: ["3"],
-        marginTop: "1em",
-        textAlign: "center"
-      }}>
-        3999 NOK for the first 2 hours and then 999 NOK/h for the next ones
-      </Text>
+        <Heading
+          sx={{
+            fontSize: ["4", "5"],
+            textAlign: "center",
+          }}
+        >
+          Let's keep it simple – one fixed price.
+        </Heading>
+        <div>
+          <Text sx={{
+            fontSize: ["3"],
+            marginTop: "1em",
+            textAlign: "center",
+          }}>
+            kr 3770,- for the first 2 hours and then kr 730,-/h for the next ones
+          </Text>
+          <Text sx={{
+            fontSize: ["2"],
+            textAlign: "center",
+            fontStyle: "italic",
+          }}>
+            for example 3 hours of photo shoot is kr 3770 + kr 730 = kr 4500,-
+          </Text>
+        </div>
         <Heading
           sx={{
             marginTop: ["1.5em", "3em"],
@@ -335,20 +385,21 @@ class FsPricing extends React.Component {
             textAlign: "center",
           }}
         >
-Why are we cheaper than our competition?
+          Why are we cheaper than our competition?
         </Heading>
 
         <Text sx={{
           fontSize: ["3"],
           marginTop: "1em",
-          textAlign: "center"
+          textAlign: "center",
         }}>
-<b>Because</b> spreading smiles and good athmosphere is our mission :D
+          <b>Because</b> spreading smiles and good atmosphere is our mission :D
         </Text>
       </Box>
     )
   }
 }
+
 class FsPictures extends React.Component {
   render() {
     return (
@@ -392,7 +443,7 @@ const BlogIndex = ({ data, location }) => {
           as="h1" href="#!">
           FotoSmil Trondheim
         </NavLink>
-        <div style={{ flex: "auto" }}></div>
+        <div style={{ flex: "auto" }} />
         <NavLink
           style={{
             color: "white",
@@ -406,6 +457,7 @@ const BlogIndex = ({ data, location }) => {
         <FsOffer features={data.site.siteMetadata.features} />
         <FsSmile />
         <FsPricing />
+        <FsInsta />
         <FsLogos logos={data.logos} />
         <FsContact />
         <FsFooter />
@@ -439,34 +491,34 @@ function renderLogo(logo) {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        features {
-          logo
-          heading
-          description
+    query {
+        site {
+            siteMetadata {
+                title
+                features {
+                    logo
+                    heading
+                    description
+                }
+            }
         }
-      }
-    }
-    logos: allFile(filter: { relativePath: { regex: "/partners/logo_/" } }) {
-      nodes {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
+        logos: allFile(filter: { relativePath: { regex: "/partners/logo_/" } }) {
+            nodes {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
         }
-      }
-    }
-    pictures: allFile(filter: { relativePath: { regex: "/parties//" } }) {
-      nodes {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
+        pictures: allFile(filter: { relativePath: { regex: "/parties//" } }) {
+            nodes {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
         }
-      }
     }
-  }
 `

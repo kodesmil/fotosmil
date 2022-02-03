@@ -31,13 +31,13 @@ module.exports = {
         heading: "Vast choice of props",
         logo: "witch",
         description:
-          "Our clients can use a full palette of hundreds of our props and choose from our backdrops (we send patterns on request). What's more, clients can order props dedicated for a special theme party, although this service is extra paid.",
+          "Our clients can use a full palette of hundreds of our props and choose from our backdrops (we send patterns on request). What's more, clients can order props or a backdrop dedicated for a special theme party, although this service is extra paid.",
       },
       {
         heading: "Delivery within Stor Trondheim",
         logo: "on-the-way",
         description:
-          "Orkanger, Stjørdal and Melhus are still free. For further distances - send us request.",
+          "Orkanger, Stjørdal and Melhus are still free. For longer distances - send us request.",
       },
     ],
   },
