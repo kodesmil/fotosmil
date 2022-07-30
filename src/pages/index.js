@@ -3,7 +3,18 @@ import { graphql } from "gatsby"
 import Fade from "react-reveal/Fade"
 
 import SEO from "../components/seo"
-import { Box, Button, Container, Flex, Grid, Heading, Input, NavLink, Styled, Text } from "theme-ui"
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  Grid,
+  Heading,
+  Input,
+  NavLink,
+  Styled,
+  Text,
+} from "theme-ui"
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 import { StyledBackgroundSection } from "../components/styledBackgroundSection"
 import { Offer } from "../components/offer"
@@ -77,20 +88,28 @@ function FsHeader() {
 
 function FsSmile() {
   return (
-    <Box sx={{
-      marginTop: ["2em", "4em"],
-    }}>
-      <Heading sx={{
-        fontSize: ["5", "6"],
-        textAlign: "center",
-      }}> 🥳</Heading>
+    <Box
+      sx={{
+        marginTop: ["2em", "4em"],
+      }}
+    >
+      <Heading
+        sx={{
+          fontSize: ["5", "6"],
+          textAlign: "center",
+        }}
+      >
+        {" "}
+        🥳
+      </Heading>
       <Text
         as={"div"}
         sx={{
           marginTop: "1em",
           textAlign: "center",
           fontSize: ["4"],
-        }}>
+        }}
+      >
         We made <b>4000+</b> people smiling!
       </Text>
     </Box>
@@ -99,15 +118,20 @@ function FsSmile() {
 
 function FsInsta() {
   return (
-    <Box sx={{
-      marginTop: ["4em", "6em"],
-    }}>
+    <Box
+      sx={{
+        marginTop: ["4em", "6em"],
+      }}
+    >
       <Text
         as={"h3"}
         sx={{
           fontSize: ["4", "5"],
           textAlign: "center",
-        }}>Meet us on Instagram!</Text>
+        }}
+      >
+        Meet us on Instagram!
+      </Text>
       <Flex
         sx={{
           alignItems: "center",
@@ -118,19 +142,27 @@ function FsInsta() {
           gap={[0, 4, 4, 4]}
           columns={[1, 2, 2, 2]}
           sx={{
-            marginRight: "auto", marginLeft: "auto",
+            marginRight: "auto",
+            marginLeft: "auto",
           }}
         >
-          <iframe width="320" height="460" src="https://www.instagram.com/p/CIp6kV6JNzq/embed"
-                  frameBorder="0" />
-          <iframe width="320" height="460" src="https://www.instagram.com/p/BuEWMHjhUZv/embed"
-                  frameBorder="0" />
+          <iframe
+            width="320"
+            height="460"
+            src="https://www.instagram.com/p/CIp6kV6JNzq/embed"
+            frameBorder="0"
+          />
+          <iframe
+            width="320"
+            height="460"
+            src="https://www.instagram.com/p/BuEWMHjhUZv/embed"
+            frameBorder="0"
+          />
         </Grid>
       </Flex>
     </Box>
   )
 }
-
 
 function FsContact() {
   return (
@@ -154,7 +186,8 @@ function FsContact() {
         sx={{
           fontSize: ["4", "5"],
           textAlign: "center",
-        }}>
+        }}
+      >
         Would you like to learn more?
       </Text>
       <Text
@@ -163,14 +196,18 @@ function FsContact() {
           fontSize: ["3"],
           textAlign: "center",
           marginTop: "8px",
-        }}>
+        }}
+      >
         Leave us your contact
       </Text>
       <Box sx={{ width: ["90%", "75%", "50%"], mx: "auto" }} mt={3}>
         <Input placeholder="Name" name="name" mb={3} />
         <Input placeholder="Email" type="email" name="password" mb={3} />
       </Box>
-      <Button type="submit" sx={{ mx: "auto", display: "block", backgroundColor: "purple" }}>
+      <Button
+        type="submit"
+        sx={{ mx: "auto", display: "block", backgroundColor: "purple" }}
+      >
         Submit
       </Button>
 
@@ -178,8 +215,10 @@ function FsContact() {
         as={"div"}
         sx={{
           fontSize: ["3"],
-          textAlign: "center", marginTop: "2em",
-        }}>
+          textAlign: "center",
+          marginTop: "2em",
+        }}
+      >
         or use
       </Text>
       <Styled.a
@@ -212,30 +251,45 @@ function FsContact() {
 
 function FsLogos(props) {
   return (
-    <Grid
-      gap="2em"
-      columns={[5]}
+    <Container
       sx={{
         marginTop: ["4em", "8em"],
-        alignItems: "center",
-        alignContent: "center",
-        background: "white",
-        paddingX: ["1em", "4em", "8em"],
-        paddingY: ["1em"],
-        boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
       }}
     >
-      {props.logos.nodes.map((logo, i) => (
-        <GatsbyImage
-          key={i}
-          imgStyle={{
-            objectFit: "contain",
-          }}
-          image={logo.childImageSharp.gatsbyImageData}
-          alt=""
-        />
-      ))}
-    </Grid>
+      <Text
+        as={"h3"}
+        sx={{
+          fontSize: ["4", "5"],
+          textAlign: "center",
+        }}
+      >
+        Our Clients
+      </Text>
+      <Grid
+        gap="2em"
+        columns={[5]}
+        sx={{
+          alignItems: "center",
+          alignContent: "center",
+          background: "white",
+          marginTop: ["2em"],
+          paddingX: ["1em", "4em", "8em"],
+          paddingY: ["3em"],
+          boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
+        }}
+      >
+        {props.logos.nodes.map((logo, i) => (
+          <GatsbyImage
+            key={i}
+            imgStyle={{
+              objectFit: "contain",
+            }}
+            image={logo.childImageSharp.gatsbyImageData}
+            alt=""
+          />
+        ))}
+      </Grid>
+    </Container>
   )
 }
 
@@ -254,7 +308,8 @@ function FsFooter() {
             marginTop: "1em",
             fontSize: ["3"],
             textAlign: "center",
-          }}>
+          }}
+        >
           Made with ♥ in Trondheim by{" "}
           <Styled.a href="https://kodesmil.com">Kodesmil</Styled.a>
         </Text>
@@ -290,8 +345,10 @@ function FsPricing() {
             fontSize: ["3"],
             marginTop: "1em",
             textAlign: "center",
-          }}>
-          kr 3770,- for the first 2 hours and then kr 730,- per hour for the next ones
+          }}
+        >
+          kr 4270,- for the first 2 hours and then kr 1730,- per hour for the
+          next ones
         </Text>
         <Text
           as={"div"}
@@ -299,8 +356,20 @@ function FsPricing() {
             fontSize: ["2"],
             textAlign: "center",
             fontStyle: "italic",
-          }}>
-          for example 3 hours of photo shoot is kr 3770 + kr 730 = kr 4500,-
+          }}
+        >
+          for example 3 hours of photo shoot is kr 4270 + kr 1730 = kr 6000,-
+        </Text>
+        <Text
+          as={"div"}
+          sx={{
+            fontSize: ["2"],
+            textAlign: "center",
+            fontStyle: "italic",
+          }}
+        >
+          For events or concerts, we also offer pay per session model (kr 110
+          per session)
         </Text>
       </div>
       <Text
@@ -320,7 +389,8 @@ function FsPricing() {
           fontSize: ["3"],
           marginTop: "1em",
           textAlign: "center",
-        }}>
+        }}
+      >
         <b>Because</b> spreading smiles and good atmosphere is our mission :D
       </Text>
     </Box>
@@ -357,17 +427,14 @@ const BlogIndex = ({ data, location }) => {
     <div>
       <SEO title={siteTitle} />
       <FsTobBar>
-        <StaticImage
-          width={72}
-          src="./logo.png"
-          alt="Fotosmil Trondheim"
-        />
+        <StaticImage width={72} src="./logo.png" alt="Fotosmil Trondheim" />
         <NavLink
           sx={{
             color: "white",
             marginLeft: ["1em", "2em", "3em"],
           }}
-          href="#offer">
+          href="#offer"
+        >
           Offer
         </NavLink>
         <NavLink
@@ -375,7 +442,8 @@ const BlogIndex = ({ data, location }) => {
             color: "white",
             marginLeft: ["1em", "2em", "3em"],
           }}
-          href="#pricing">
+          href="#pricing"
+        >
           Pricing
         </NavLink>
         <NavLink
@@ -383,19 +451,22 @@ const BlogIndex = ({ data, location }) => {
             color: "white",
             marginLeft: ["1em", "2em", "3em"],
           }}
-          href="#contact">
+          href="#contact"
+        >
           Contact
         </NavLink>
       </FsTobBar>
       <FsHeader background={data.background} />
-      <Fade>
+      <Fade delay={0}>
         <FsPictures pictures={data.joana} />
+      </Fade>
+      <Fade delay={0}>
         <Offer features={data.site.siteMetadata.features} />
         <FsPricing />
         <FsSmile />
-        <FsInsta />
-        <FsLogos logos={data.logos} />
         <FsContact />
+        <FsLogos logos={data.logos} />
+        <FsInsta />
         <FsFooter />
         <FsPictures pictures={data.pictures} />
       </Fade>
@@ -406,54 +477,61 @@ const BlogIndex = ({ data, location }) => {
 export default BlogIndex
 
 export const pageQuery = graphql`
-    query {
-        site {
-            siteMetadata {
-                title
-                features {
-                    logo
-                    heading
-                    description
-                }
-            }
+  query {
+    site {
+      siteMetadata {
+        title
+        features {
+          logo
+          heading
+          description
         }
-        logos: allFile(sort: {fields: [relativePath]}, filter: { relativePath: { regex: "/partners/logo_/" } }) {
-            nodes {
-                childImageSharp {
-                    gatsbyImageData(
-                        layout: CONSTRAINED
-                        placeholder: TRACED_SVG
-                        quality: 50
-                        height: 100
-                        transformOptions: {
-                            grayscale: false
-                        }
-                    )
-                }
-            }
-        }
-        pictures: allFile(sort: {fields: [relativePath]}, filter: { relativePath: { regex: "/parties//" } }) {
-            nodes {
-                childImageSharp {
-                    gatsbyImageData(
-                        layout: CONSTRAINED
-                        placeholder: DOMINANT_COLOR
-                        height: 200
-                    )
-                }
-            }
-        }
-        joana: allFile(sort: {fields: [relativePath]}, filter: { relativePath: { regex: "/joana//" } }) {
-            nodes {
-                childImageSharp {
-                    gatsbyImageData(
-                        layout: CONSTRAINED
-                        placeholder: DOMINANT_COLOR
-                        quality: 25
-                        height: 200
-                    )
-                }
-            }
-        }
+      }
     }
+    logos: allFile(
+      sort: { fields: [relativePath] }
+      filter: { relativePath: { regex: "/partners/" } }
+    ) {
+      nodes {
+        childImageSharp {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: TRACED_SVG
+            quality: 50
+            height: 100
+            transformOptions: { grayscale: false }
+          )
+        }
+      }
+    }
+    pictures: allFile(
+      sort: { fields: [relativePath] }
+      filter: { relativePath: { regex: "/parties//" } }
+    ) {
+      nodes {
+        childImageSharp {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: DOMINANT_COLOR
+            height: 200
+          )
+        }
+      }
+    }
+    joana: allFile(
+      sort: { fields: [relativePath] }
+      filter: { relativePath: { regex: "/joana//" } }
+    ) {
+      nodes {
+        childImageSharp {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: DOMINANT_COLOR
+            quality: 25
+            height: 200
+          )
+        }
+      }
+    }
+  }
 `

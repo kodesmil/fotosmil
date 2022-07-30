@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c25335a0-5677-4e94-afa1-35ee66f664df" name="Changes" comment="Add new pictures">
+      <change afterPath="$PROJECT_DIR$/.idea/gatsby_fotosmil.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/joana/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/partners/3t logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/partners/Hellsenteret logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/partners/NHFU+Logo+til+Facebook.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/partners/NoPSA logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/partners/Q-Free_Logo_H.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/partners/Torkvartalet logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/partners/Ung i SINTEF logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/partners/evento AS logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/partners/ladehammer festivalen logo svart.tiff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/partners/ladehammer festivalen logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/partners/mexican culture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/partners/mgp logo night.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/partners/nhf logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/partners/scandic hell logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/partners/technoport rgb_TTP_vertical.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/fotosmil.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/assets/joana/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/content/assets/joana/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/assets/joana/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/content/assets/joana/5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/assets/joana/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/assets/parties/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/content/assets/parties/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/assets/parties/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/content/assets/parties/4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/assets/parties/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/content/assets/parties/5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/assets/parties/6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/content/assets/parties/6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Ccok3h0zI90feAuq8rKFahKvF4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TF_FMT": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "/Users/m.urbanski/Projects/gatsby_fotosmil/content/assets/joana",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "/Users/m.urbanski/Projects/gatsby_fotosmil/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/content/assets/joana" />
+      <recent name="$PROJECT_DIR$/content/assets/parties" />
+      <recent name="$PROJECT_DIR$/content/assets/partners" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/content/assets/joana" />
+      <recent name="$PROJECT_DIR$/content/assets/parties" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c25335a0-5677-4e94-afa1-35ee66f664df" name="Changes" comment="" />
+      <created>1659111375506</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659111375506</updated>
+      <workItem from="1659111379117" duration="115000" />
+      <workItem from="1659111499764" duration="22000" />
+      <workItem from="1659111525084" duration="4671000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add new pictures" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new pictures" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
