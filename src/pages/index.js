@@ -266,7 +266,7 @@ function FsLogos(props) {
         Our Clients
       </Text>
       <Grid
-        gap="2em"
+        gap="3em"
         columns={[5]}
         sx={{
           alignItems: "center",
@@ -274,7 +274,7 @@ function FsLogos(props) {
           background: "white",
           marginTop: ["2em"],
           paddingX: ["1em", "4em", "8em"],
-          paddingY: ["3em"],
+          paddingY: ["2em", "4em"],
           boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
         }}
       >
@@ -347,8 +347,8 @@ function FsPricing() {
             textAlign: "center",
           }}
         >
-          kr 4270,- for the first 2 hours and then kr 1730,- per hour for the
-          next ones
+          kr 4230,- (eks. MVA) for the first 2 hours and then kr 1770,- (eks.
+          MVA) per hour for the next ones
         </Text>
         <Text
           as={"div"}
@@ -358,7 +358,8 @@ function FsPricing() {
             fontStyle: "italic",
           }}
         >
-          for example 3 hours of photo shoot is kr 4270 + kr 1730 = kr 6000,-
+          for example 3 hours of photo shoot is kr 4230 + kr 1770 = kr 6000,-
+          (eks. MVA)
         </Text>
         <Text
           as={"div"}
