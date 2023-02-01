@@ -52,8 +52,8 @@ function FsHeader() {
       <Box
         sx={{
           width: ["90%", "80%", "70%"],
-          paddingTop: ["12em", "22em"],
-          paddingBottom: ["12em", "22em"],
+          paddingTop: ["8em", "10em"],
+          paddingBottom: ["8em", "10em"],
           mx: "auto",
         }}
       >
@@ -67,10 +67,23 @@ function FsHeader() {
             textAlign: "center",
           }}
         >
-          Professional Photo Booth
+          FotoSmil Trondheim Photobooth
         </Text>
         <Text
-          as={"h3"}
+          as={"h2"}
+          sx={{
+            color: "white",
+            marginTop: "1em",
+            textShadow: "2px 2px 10px black",
+            lineHeight: "1",
+            fontSize: ["5", "6"],
+            textAlign: "center",
+          }}
+        >
+          et høydepunkt til alle typer fester og arrangementer
+        </Text>
+        <Text
+          as={"p"}
           sx={{
             color: "white",
             marginTop: "1em",
@@ -79,7 +92,18 @@ function FsHeader() {
             textAlign: "center",
           }}
         >
-          The best fun booster and ice-breaker for events, parties and weddings
+          firmafest, bryllup, barnefest, studentarrangement, julebord,
+        </Text>
+        <Text
+          as={"p"}
+          sx={{
+            color: "white",
+            textShadow: "2px 2px 10px black",
+            fontSize: ["4", "5"],
+            textAlign: "center",
+          }}
+        >
+          konfirmasjon, bursdag, konsert eller messe!
         </Text>
       </Box>
     </StyledBackgroundSection>
@@ -90,28 +114,28 @@ function FsSmile() {
   return (
     <Box
       sx={{
-        marginTop: ["2em", "4em"],
+        marginTop: ["2em", "3em"],
+        marginBottom: ["2em", "3em"],
       }}
     >
+      <Text
+        as={"p"}
+        sx={{
+          textAlign: "center",
+          fontSize: ["3", "4"],
+        }}
+      >
+        Vårt mål er å levere så mange smil som mulig og bidra til god stemning!
+      </Text>
       <Heading
         sx={{
+          marginTop: "0.5em",
           fontSize: ["5", "6"],
           textAlign: "center",
         }}
       >
-        {" "}
-        🥳
+        🥳 🍻 🎉 🍾 🥂 🥳
       </Heading>
-      <Text
-        as={"div"}
-        sx={{
-          marginTop: "1em",
-          textAlign: "center",
-          fontSize: ["4"],
-        }}
-      >
-        We made <b>4000+</b> people smiling!
-      </Text>
     </Box>
   )
 }
@@ -130,7 +154,7 @@ function FsInsta() {
           textAlign: "center",
         }}
       >
-        Meet us on Instagram!
+        Vi er på Instagram!
       </Text>
       <Flex
         sx={{
@@ -188,7 +212,7 @@ function FsContact() {
           textAlign: "center",
         }}
       >
-        Would you like to learn more?
+        Lurer du på noe?
       </Text>
       <Text
         as={"div"}
@@ -198,7 +222,7 @@ function FsContact() {
           marginTop: "8px",
         }}
       >
-        Leave us your contact
+        Skriv oss en melding!
       </Text>
       <Box sx={{ width: ["90%", "75%", "50%"], mx: "auto" }} mt={3}>
         <Input placeholder="Name" name="name" mb={3} />
@@ -208,7 +232,7 @@ function FsContact() {
         type="submit"
         sx={{ mx: "auto", display: "block", backgroundColor: "purple" }}
       >
-        Submit
+        Send
       </Button>
 
       <Text
@@ -219,7 +243,7 @@ function FsContact() {
           marginTop: "2em",
         }}
       >
-        or use
+        eller bruk
       </Text>
       <Styled.a
         style={{
@@ -263,7 +287,7 @@ function FsLogos(props) {
           textAlign: "center",
         }}
       >
-        Our Clients
+        Kundene våre
       </Text>
       <Grid
         gap="3em"
@@ -275,7 +299,6 @@ function FsLogos(props) {
           marginTop: ["2em"],
           paddingX: ["1em", "4em", "8em"],
           paddingY: ["2em", "4em"],
-          boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
         }}
       >
         {props.logos.nodes.map((logo, i) => (
@@ -336,7 +359,16 @@ function FsPricing() {
           textAlign: "center",
         }}
       >
-        Let's keep it simple – one fixed price.
+        Pris? La oss holde det enkelt!
+      </Text>
+      <Text
+        as={"h2"}
+        sx={{
+          fontSize: ["3", "4"],
+          textAlign: "center",
+        }}
+      >
+        Vi har laveste fastprisen...
       </Text>
       <div>
         <Text
@@ -347,8 +379,7 @@ function FsPricing() {
             textAlign: "center",
           }}
         >
-          kr 4230,- (eks. MVA) for the first 2 hours and then kr 1770,- (eks.
-          MVA) per hour for the next ones
+          kr. 4730,- for de første to timene og kr. 1770,- per extra time.
         </Text>
         <Text
           as={"div"}
@@ -358,42 +389,9 @@ function FsPricing() {
             fontStyle: "italic",
           }}
         >
-          for example 3 hours of photo shoot is kr 4230 + kr 1770 = kr 6000,-
-          (eks. MVA)
-        </Text>
-        <Text
-          as={"div"}
-          sx={{
-            fontSize: ["2"],
-            textAlign: "center",
-            fontStyle: "italic",
-          }}
-        >
-          For events or concerts, we also offer pay per session model (kr 110
-          per session)
+          For eksempel 3 timer er kr. 6500,- og 4 timer er kr. 8270,-
         </Text>
       </div>
-      <Text
-        as={"h3"}
-        sx={{
-          fontSize: ["4", "5"],
-          marginTop: ["1.5em", "3em"],
-          textAlign: "center",
-        }}
-      >
-        Why are we cheaper than our competition?
-      </Text>
-
-      <Text
-        as={"div"}
-        sx={{
-          fontSize: ["3"],
-          marginTop: "1em",
-          textAlign: "center",
-        }}
-      >
-        <b>Because</b> spreading smiles and good atmosphere is our mission :D
-      </Text>
     </Box>
   )
 }
@@ -436,7 +434,7 @@ const BlogIndex = ({ data, location }) => {
           }}
           href="#offer"
         >
-          Offer
+          Tilbud
         </NavLink>
         <NavLink
           sx={{
@@ -445,7 +443,7 @@ const BlogIndex = ({ data, location }) => {
           }}
           href="#pricing"
         >
-          Pricing
+          Pris
         </NavLink>
         <NavLink
           sx={{
@@ -454,23 +452,19 @@ const BlogIndex = ({ data, location }) => {
           }}
           href="#contact"
         >
-          Contact
+          Kontakt
         </NavLink>
       </FsTobBar>
       <FsHeader background={data.background} />
-      <Fade delay={0}>
-        <FsPictures pictures={data.joana} />
-      </Fade>
-      <Fade delay={0}>
-        <Offer features={data.site.siteMetadata.features} />
-        <FsPricing />
-        <FsSmile />
-        <FsContact />
-        <FsLogos logos={data.logos} />
-        <FsInsta />
-        <FsFooter />
-        <FsPictures pictures={data.pictures} />
-      </Fade>
+      <FsSmile />
+      <FsPictures pictures={data.joana} />
+      <Offer features={data.site.siteMetadata.features} />
+      <FsPricing />
+      <FsContact />
+      <FsInsta />
+      <FsLogos logos={data.logos} />
+      <FsFooter />
+      <FsPictures pictures={data.pictures} />
     </div>
   )
 }

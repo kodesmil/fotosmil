@@ -1,51 +1,44 @@
 module.exports = {
   siteMetadata: {
-    title: `FotoSmil Trondheim | Photo Booth`,
+    title: `Leie, Utleie | FotoSmil Trondheim | Photo Booth | Fotoboks`,
     name: `Fotoboks`,
     author: {
       name: `FotoSmil Trondheim`,
-      summary: `Photo booth - fun booster and ice-breaker for events, parties, weddings`,
+      summary: `Leie en photobooth fra FotoSmil Trondheim - skaff deg en profesjonell fotoboks på festen! Perfekt til firmafest, bryllup, barnefest, studentarrangement, julebord, konfirmasjon, bursdag, konsert eller messe!`,
     },
-    description: `Fun booster and ice-breaker for events, parties, weddings`,
+    description: `Leie en photobooth fra FotoSmil Trondheim - skaff deg en profesjonell fotoboks på festen! Perfekt til firmafest, bryllup, barnefest, studentarrangement, julebord, konfirmasjon, bursdag, konsert eller messe!`,
     siteUrl: `https://www.fotosmil.no/`,
     features: [
       {
-        heading: "Technical support",
+        heading: "Teknisk Support",
         logo: "whole-year",
         description:
-          "You won't need to worry about installation of the photo booth nor about any other technical issue. Let us do it for you.",
+          "Levering innen Trondheimsregionen, oppsett og en person som blir til stede som teknisk support under hele eventen.",
       },
       {
-        heading: "Unlimited photo printouts",
+        heading: "Personalisert ustkrifter",
         logo: "moments",
         description:
-          "There are usually 3 or 4 photos on a single printout stripe. We will print as many as needed - with no extra cost! (during rental hours)",
+          "Ubegrenset med printouts som inneholder din logo, pynt og/eller tekst. Vi hjelper deg med å designe!",
       },
       {
-        heading: "Top-quality service",
+        heading: "Live view, QR-kode og epost deling",
         logo: "polaroid",
         description:
-          "Delivering best quality service is our goal. Our photos are taken with a professional SLR camera to ensure best service for you.",
+          "Fotoboksen har skjerm med live view hvor man kan også laste ned egne bilder via en QR-kode eller sende på epost i løpet av festen, rett etter hver 3-shot session.",
       },
       {
-        heading: "Vast choice of props",
+        heading: "Underholdende props og pynt",
         logo: "witch",
         description:
-          "Our clients can use a full palette of hundreds of our props and choose from our backdrops (we send patterns on request). What's more, clients can order props or a backdrop dedicated for a special theme party, although this service is extra paid.",
-      },
-      {
-        heading: "Delivery within Stor Trondheim",
-        logo: "on-the-way",
-        description:
-          "Orkanger, Stjørdal and Melhus are still free. For longer distances - send us request.",
+          "Vi har masse props og backdrop som du kan bruke for å gjøre bildene morsomme! Vil du ha en tilpasset/tema backdrop eller props, vil vi bestille denne før fra en ekstern leverandør (ekstra kostnader).",
       },
     ],
   },
   plugins: [
     {
       resolve: `gatsby-plugin-sharp`,
-      options: {
-      },
+      options: {},
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
@@ -68,11 +61,11 @@ module.exports = {
     },
     `gatsby-plugin-typescript`,
     //{
-     // resolve: `gatsby-plugin-google-analytics`,
-     // options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-     // },
-   //},
+    // resolve: `gatsby-plugin-google-analytics`,
+    // options: {
+    //trackingId: `ADD YOUR TRACKING ID HERE`,
+    // },
+    //},
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -89,16 +82,15 @@ module.exports = {
     {
       resolve: "gatsby-plugin-hubspot",
       options: {
-          trackingCode: "7020884",
-          respectDNT: true,
-          productionOnly: false,
+        trackingCode: "26908322",
+        respectDNT: true,
+        productionOnly: false,
       },
     },
     // `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-netlify-cms`,
-      options: {
-      },
+      options: {},
     },
   ],
 }

@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c25335a0-5677-4e94-afa1-35ee66f664df" name="Changes" comment="Add new pictures">
-      <change afterPath="$PROJECT_DIR$/content/assets/partners/City Lade logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/partners/EMIL NTNU.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/partners/Norbit_Banner2x1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/partners/coop midt norge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/partners/thon hotel prinsen.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/offer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/offer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +35,7 @@
     "TF_FMT": "false",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "/Users/m.urbanski/Projects/gatsby_fotosmil/content/assets/partners",
+    "last_opened_file_path": "/Users/m.urbanski/Projects/gatsby_fotosmil/src/components",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -48,6 +47,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/content/assets/partners" />
       <recent name="$PROJECT_DIR$/content/assets/joana" />
       <recent name="$PROJECT_DIR$/content/assets/parties" />
@@ -69,7 +69,8 @@
       <workItem from="1659111499764" duration="22000" />
       <workItem from="1659111525084" duration="4824000" />
       <workItem from="1659347381795" duration="76000" />
-      <workItem from="1666361717508" duration="572000" />
+      <workItem from="1666361717508" duration="760000" />
+      <workItem from="1675237346356" duration="6094000" />
     </task>
     <task id="LOCAL-00001" summary="Add new pictures">
       <created>1659201683792</created>
@@ -78,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659201683792</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add new pictures">
+      <created>1666362337078</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666362337078</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

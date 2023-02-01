@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Grid, Text } from "theme-ui"
+import { Box, Grid, NavLink, Text } from "theme-ui"
 import { Svg } from "./svg"
 
 export function Offer(props) {
@@ -9,55 +9,83 @@ export function Offer(props) {
         as={"div"}
         sx={{
           mx: "auto",
-          paddingTop: ["2em", "4em"],
+          paddingTop: ["2em", "3em"],
+          textAlign: "center",
           width: ["80%", "60%", "60%", "35%"],
           fontSize: ["4"],
-        }}>
-        Our mission is to deliver as many smiles as possible and provide good atmosphere.
+        }}
+      >
+        Leie en photobooth fra FotoSmil Trondheim - skaff deg en profesjonell
+        fotoboks på festen!
       </Text>
-      <Grid sx={{
-        marginTop: ["2em", "4em"],
-      }} gap="6em" columns={[1]}>
+      <Text
+        as={"div"}
+        sx={{
+          mx: "auto",
+          paddingTop: ["0.5em"],
+          textAlign: "center",
+          width: ["80%", "60%", "60%", "35%"],
+          fontSize: ["4"],
+        }}
+      >
+        <NavLink
+          sx={{
+            textAlign: "center",
+            color: "black",
+          }}
+          href="#contact"
+        >
+          Send melding nå
+        </NavLink>
+      </Text>
+      <Text
+        as={"h2"}
+        sx={{
+          mx: "auto",
+          marginTop: ["1em", "2em"],
+          width: ["80%", "60%", "60%", "35%"],
+          textAlign: "center",
+          fontSize: ["4", "5"],
+        }}
+      >
+        Du får i prisen
+      </Text>
+      <Grid
+        sx={{
+          marginTop: ["1em", "1em"],
+        }}
+        gap="3em"
+        columns={[1]}
+      >
         {props.features.map((feature, i) => (
           <Box
             key={i}
             sx={{
               mx: "auto",
-              marginTop: ["2em", "3em"],
-              width: ["80%", "60%", "60%", "35%"],
+              marginTop: ["1em", "2em"],
+              textAlign: "center",
+              width: ["80%", "60%", "60%", "30%"],
             }}
           >
             <Text
               as={"h3"}
               sx={{
-                fontSize: ["4", "5"],
+                fontSize: ["3", "4"],
               }}
             >
               {feature.heading}
             </Text>
-            <Grid
-              gap="3em"
-              columns={[1, 2]}
+            <Text
+              as={"div"}
+              sx={{
+                marginTop: ["0.5em", "0.5em"],
+                marginBottom: ["1em", "1.5em"],
+                fontSize: ["2", "3"],
+              }}
             >
-              <Text
-                as={"div"}
-                sx={{
-                  fontSize: ["2", "3"],
-                  marginTop: ["0.5em"],
-                }}>
-                {feature.description}
-              </Text>
-              <Box
-                sx={{
-                  marginTop: ["0", "10em"],
-                  width: ["12em", "12em", "14em", "14em"],
-                  minWidth: ["12em", "12em", "14em", "14em"],
-                  marginLeft: "auto",
-                }}
-              >
-                <Svg logo={feature.logo} />
-              </Box>
-            </Grid>
+              {feature.description}
+            </Text>
+            <Svg logo={feature.logo} />
           </Box>
         ))}
       </Grid>

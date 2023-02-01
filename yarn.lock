@@ -6794,6 +6794,13 @@ gatsby-source-filesystem@^4.6.0:
     valid-url "^1.0.9"
     xstate "^4.26.1"
 
+gatsby-source-hubspot-forms@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-source-hubspot-forms/-/gatsby-source-hubspot-forms-3.0.3.tgz#a91ae185530443289bd6d2c80c4d3502c054ae9a"
+  integrity sha512-1hcV2HlN5MLzrV5Hqs0xDR/YLT8j02zNWbqBlx2GQ4RTrQnSmJ9q4D+y8rCG090td+EdTtQ3uteobHyrhdgtLw==
+  dependencies:
+    axios "^0.21.1"
+
 gatsby-source-hubspot@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-hubspot/-/gatsby-source-hubspot-2.2.0.tgz#c0aa1a3fd74eb73186a9010d5370aa52d18ed8ff"
