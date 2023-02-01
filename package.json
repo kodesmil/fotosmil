@@ -70,7 +70,7 @@
     "deps:update": "npm-check-updates --configFileName ncurc.yml -u --deep --dep prod,dev,optional"
   },
   "engines": {
-    "node": ">=14",
+    "node": ">=14.18.0",
     "yarn": ">=1.22.0",
     "npm": "please-use-yarn"
   }
