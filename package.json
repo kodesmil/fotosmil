@@ -10,7 +10,7 @@
   "dependencies": {
     "@mdx-js/react": "^2.0.0",
     "babel-plugin-styled-components": "^2.0.2",
-    "gatsby": "^2.13.57",
+    "gatsby": "^4.6.1",
     "gatsby-background-image": "^1.6.0",
     "gatsby-plugin-feed": "^4.6.0",
     "gatsby-plugin-google-analytics": "^4.6.0",
