@@ -1,8 +1,7 @@
-import React from "react"
 import { graphql } from "gatsby"
-import Fade from "react-reveal/Fade"
+import React from "react"
 
-import SEO from "../components/seo"
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 import {
   Box,
   Button,
@@ -15,9 +14,9 @@ import {
   Styled,
   Text,
 } from "theme-ui"
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
-import { StyledBackgroundSection } from "../components/styledBackgroundSection"
 import { Offer } from "../components/offer"
+import SEO from "../components/seo"
+import { StyledBackgroundSection } from "../components/styledBackgroundSection"
 
 function FsTobBar(props) {
   return (
@@ -80,7 +79,7 @@ function FsHeader() {
             textAlign: "center",
           }}
         >
-          et høydepunkt til alle typer fester og arrangementer
+          Din beste fotoboks-opplevelse fra A til Å
         </Text>
         <Text
           as={"p"}
@@ -92,18 +91,7 @@ function FsHeader() {
             textAlign: "center",
           }}
         >
-          firmafest, bryllup, barnefest, studentarrangement, julebord,
-        </Text>
-        <Text
-          as={"p"}
-          sx={{
-            color: "white",
-            textShadow: "2px 2px 10px black",
-            fontSize: ["4", "5"],
-            textAlign: "center",
-          }}
-        >
-          konfirmasjon, bursdag, konsert eller messe!
+          Perfekt for å skape morsomme minner fra alle typer arrangementer: firmafest, bryllup, barnefest, studentarrangement, julebord, konferanse, konfirmasjon, bursdag, jubileum, sommerfest, konsert eller messe!
         </Text>
       </Box>
     </StyledBackgroundSection>
@@ -125,7 +113,7 @@ function FsSmile() {
           fontSize: ["3", "4"],
         }}
       >
-        Vårt mål er å levere så mange smil som mulig og bidra til god stemning!
+        Målet vårt er å bidra til et hav av smil og skape god stemning overalt!
       </Text>
       <Heading
         sx={{
@@ -134,7 +122,7 @@ function FsSmile() {
           textAlign: "center",
         }}
       >
-        🥳 🍻 🎉 🍾 🥂 🥳
+        🥳 🍻 🎉 📸 🍾 🥂 🥳
       </Heading>
     </Box>
   )

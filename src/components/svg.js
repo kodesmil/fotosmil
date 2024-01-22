@@ -1,9 +1,7 @@
 import React from "react"
-import Moments from "../../content/assets/svg/Moments.svg"
-import Witch from "../../content/assets/svg/Witch.svg"
-import WholeYear from "../../content/assets/svg/WholeYear.svg"
-import Polaroid from "../../content/assets/svg/Polaroid.svg"
-import OnTheWay from "../../content/assets/svg/OnTheWay.svg"
+import {
+  Box,
+} from "theme-ui"
 
 export class Svg extends React.Component {
   render() {
@@ -15,14 +13,14 @@ function renderLogo(logo) {
   let style = { height: "inherit", width: "inherit" }
   switch (logo) {
     case "moments":
-      return <Moments style={style} />
+      return <Box sx={{ fontSize: "4rem"}}>🖼️</Box>
     case "on-the-way":
-      return <OnTheWay style={style} />
+      return <Box sx={{ fontSize: "4rem"}}>📸</Box>
     case "polaroid":
-      return <Polaroid style={style} />
+      return <Box sx={{ fontSize: "4rem"}}>🌎</Box>
     case "whole-year":
-      return <WholeYear style={style} />
+      return <Box sx={{ fontSize: "4rem"}}>🦸‍♂️ 🫶 🦸‍♀️</Box>
     case "witch":
-      return <Witch style={style} />
+      return <Box sx={{ fontSize: "4rem"}}> 🧑‍🚀 🧌 🎅 🧙‍♂️ </Box>
   }
 }

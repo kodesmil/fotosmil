@@ -10,7 +10,7 @@
   "dependencies": {
     "@mdx-js/react": "^2.0.0",
     "babel-plugin-styled-components": "^2.0.2",
-    "gatsby": "^4.6.1",
+    "gatsby": "^2.13.57",
     "gatsby-background-image": "^1.6.0",
     "gatsby-plugin-feed": "^4.6.0",
     "gatsby-plugin-google-analytics": "^4.6.0",
@@ -46,7 +46,7 @@
     "theme-ui": "^0.13.1"
   },
   "devDependencies": {
-    "npm-check-updates": "^12.2.1",
+    "npm-check-updates": "^16.14.12",
     "prettier": "^2.5.1"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
@@ -70,8 +70,6 @@
     "deps:update": "npm-check-updates --configFileName ncurc.yml -u --deep --dep prod,dev,optional"
   },
   "engines": {
-    "node": ">=14.18.0",
-    "yarn": ">=1.22.0",
-    "npm": "please-use-yarn"
+    "node": ">=20.11.0"
   }
 }

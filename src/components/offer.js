@@ -15,8 +15,7 @@ export function Offer(props) {
           fontSize: ["4"],
         }}
       >
-        Leie en photobooth fra FotoSmil Trondheim - skaff deg en profesjonell
-        fotoboks på festen!
+        Begynn med å booke her
       </Text>
       <Text
         as={"div"}
@@ -35,7 +34,7 @@ export function Offer(props) {
           }}
           href="#contact"
         >
-          Send melding nå
+          send oss en melding!
         </NavLink>
       </Text>
       <Text

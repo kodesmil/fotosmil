@@ -11,8 +11,8 @@ const theme = {
     512,
   ],
   "fonts": {
-    "body": "Poppins, sans-serif",
-    "heading": "Poppins, sans-serif",
+    "body": "Inter, sans-serif",
+    "heading": "Inter, sans-serif",
     "monospace": "Menlo, monospace",
   },
   "fontSizes": [
