@@ -1,4 +1,4 @@
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import React from "react"
 
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
@@ -11,8 +11,7 @@ import {
   Heading,
   Input,
   NavLink,
-  Styled,
-  Text,
+  Text
 } from "theme-ui"
 import { Offer } from "../components/offer"
 import SEO from "../components/seo"
@@ -233,7 +232,7 @@ function FsContact() {
       >
         eller bruk
       </Text>
-      <Styled.a
+      <Link
         style={{
           textAlign: "center",
           display: "block",
@@ -244,8 +243,8 @@ function FsContact() {
         href="mailto:fotosmil.trondheim@gmail.com?subject=Info about Photo Booth"
       >
         fotosmil.trondheim@gmail.com
-      </Styled.a>
-      <Styled.a
+      </Link>
+      <Link
         style={{
           textAlign: "center",
           display: "block",
@@ -256,7 +255,7 @@ function FsContact() {
         href="tel:+47 92125656"
       >
         +47 92125656
-      </Styled.a>
+      </Link>
     </Box>
   )
 }
@@ -322,7 +321,7 @@ function FsFooter() {
           }}
         >
           Made with ♥ in Trondheim by{" "}
-          <Styled.a href="https://kodesmil.com">Kodesmil</Styled.a>
+          <Link href="https://kodesmil.com">Kodesmil</Link>
         </Text>
       </Container>
     </Box>
