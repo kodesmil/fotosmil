@@ -27,10 +27,10 @@ function FsTobBar(props) {
         py: "0.5em",
         top: 0,
         width: `100%`,
-        background: `black`,
+        background: `#ffeeff`,
         position: `sticky`,
         zIndex: `100000`,
-        boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
+        boxShadow: "0px 0.5px 20px rgba(0,0,0,0.1)",
       }}
       as="nav"
     >
@@ -307,8 +307,7 @@ function FsFooter() {
   return (
     <Box
       sx={{
-        marginTop: ["4em", "8em"],
-        marginBottom: "1em",
+        marginTop: ["2em", "4em"],
       }}
     >
       <Container>
@@ -324,6 +323,72 @@ function FsFooter() {
           <Link href="https://kodesmil.com">Kodesmil</Link>
         </Text>
       </Container>
+    </Box>
+  )
+}
+
+function FsFotograf() {
+  return (
+    <Box
+      id="fotograf"
+      anchor="fotograf"
+      sx={{
+        mx: "auto",
+        paddingTop: ["4em", "8em"],
+        width: ["80%", "60%", "60%", "37%"],
+      }}
+    >
+      <Text
+        as={"h3"}
+        sx={{
+          fontSize: ["4", "5"],
+          textAlign: "center",
+        }}
+      >
+        Fotograf i Trondheim
+      </Text>
+      <div>
+        <Text
+          as={"p"}
+          sx={{
+            fontSize: ["3"],
+            marginTop: "1em",
+            textAlign: "center",
+          }}
+        >
+          Trenger du en fotograf til bedrifts- eller eventfotografering?
+        </Text>
+        <Text
+          as={"p"}
+          sx={{
+            fontSize: ["3"],
+            marginTop: "1em",
+            textAlign: "center",
+          }}
+         >
+          Kanskje ønsker du å få tatt profesjonelle portretter, barnebilder, familieportretter, graviditetsbilder eller forevige viktige øyeblikk under konfirmasjon eller bryllup?
+        </Text>
+        <Text
+          as={"p"}
+          sx={{
+            fontSize: ["3"],
+            marginTop: "1em",
+            textAlign: "center",
+          }}
+        >
+          Vi gjør dette på en lett og behagelig måte.
+        </Text>
+        <Text
+          as={"p"}
+          sx={{
+            fontSize: ["3"],
+            marginTop: "1em",
+            textAlign: "center",
+          }}
+        >
+          Ta gjerne kontakt for å avtale en time!
+        </Text>
+      </div>
     </Box>
   )
 }
@@ -355,7 +420,7 @@ function FsPricing() {
           textAlign: "center",
         }}
       >
-        Vi har laveste fastprisen...
+        Vi har laveste fastpris...
       </Text>
       <div>
         <Text
@@ -366,7 +431,7 @@ function FsPricing() {
             textAlign: "center",
           }}
         >
-          kr. 4730,- for de første to timene og kr. 1770,- per extra time.
+          kr. 5170,- for de første to timene og kr. 1830,- per ekstra time.
         </Text>
         <Text
           as={"div"}
@@ -376,10 +441,32 @@ function FsPricing() {
             fontStyle: "italic",
           }}
         >
-          For eksempel 3 timer er kr. 6500,- og 4 timer er kr. 8270,-
+          For eksempel 3 timer er kr. 7000,- og 4 timer er kr. 8830,-
         </Text>
       </div>
     </Box>
+  )
+}
+
+function FsFooterPictures(props) {
+  return (
+    <Container
+      sx={{
+        marginTop: ["4em", "8em"],
+      }}
+    >
+      <Text
+        as={"h3"}
+        sx={{
+          fontSize: ["4", "5"],
+          textAlign: "center",
+          marginBottom: '1.5em'
+        }}
+      >
+        🦸‍♂️ 🦸‍♀️ Vårt Team 🦸‍♂️ 🦸‍♀️
+      </Text>
+      <FsPictures pictures={props.pictures} />
+    </Container>
   )
 }
 
@@ -413,34 +500,45 @@ const BlogIndex = ({ data, location }) => {
     <div>
       <SEO title={siteTitle} />
       <FsTobBar>
-        <StaticImage width={72} src="./logo.png" alt="Fotosmil Trondheim" />
-        <NavLink
-          sx={{
-            color: "white",
-            marginLeft: ["1em", "2em", "3em"],
-          }}
-          href="#offer"
-        >
-          Tilbud
-        </NavLink>
-        <NavLink
-          sx={{
-            color: "white",
-            marginLeft: ["1em", "2em", "3em"],
-          }}
-          href="#pricing"
-        >
-          Pris
-        </NavLink>
-        <NavLink
-          sx={{
-            color: "white",
-            marginLeft: ["1em", "2em", "3em"],
-          }}
-          href="#contact"
-        >
-          Kontakt
-        </NavLink>
+        <StaticImage width={48} src="./logo.png" alt="Fotosmil Trondheim" />
+        <Flex as={"nav"}>
+          <NavLink
+            sx={{
+              color: "black",
+              marginLeft: ["1em", "2em", "3em"],
+            }}
+            href="#offer"
+          >
+            Tilbud
+          </NavLink>
+          <NavLink
+            sx={{
+              color: "black",
+              marginLeft: ["1em", "2em", "3em"],
+            }}
+            href="#pricing"
+          >
+            Pris
+          </NavLink>
+          <NavLink
+            sx={{
+              color: "black",
+              marginLeft: ["1em", "2em", "3em"],
+            }}
+            href="#contact"
+          >
+            Kontakt
+          </NavLink>
+            <NavLink
+              sx={{
+                color: "black",
+                marginLeft: ["1em", "3em", "4em"],
+              }}
+              href="#fotograf"
+            >
+              Fotograf i Trondheim
+            </NavLink>
+        </Flex>
       </FsTobBar>
       <FsHeader background={data.background} />
       <FsSmile />
@@ -449,9 +547,10 @@ const BlogIndex = ({ data, location }) => {
       <FsPricing />
       <FsContact />
       <FsInsta />
+      <FsFotograf />
       <FsLogos logos={data.logos} />
+      <FsFooterPictures pictures={data.pictures} />
       <FsFooter />
-      <FsPictures pictures={data.pictures} />
     </div>
   )
 }

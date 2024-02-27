@@ -38,6 +38,19 @@ export function Offer(props) {
         </NavLink>
       </Text>
       <Text
+        as={"p"}
+        sx={{
+          mx: "auto",
+          marginTop: ["1em", "2em"],
+          width: ["80%", "60%", "60%", "35%"],
+          textAlign: "center",
+          fontSize: ["2", "3"],
+        }}
+      >
+        Når du leier en fotoboks fra FotoSmil Trondheim får du en garanti på profesjonell photobooth-opplevelse til ditt arrangement
+        </Text>
+
+      <Text
         as={"h2"}
         sx={{
           mx: "auto",

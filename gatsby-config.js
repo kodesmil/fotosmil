@@ -13,25 +13,25 @@ module.exports = {
         heading: "Teknisk Support",
         logo: "whole-year",
         description:
-          "Levering innen Trondheimsregionen, oppsett og en person som blir til stede som teknisk support under hele eventen.",
+          "Levering innen Trondheimsregionen, rigging av utstyr og en person som blir til stede som teknisk support under hele eventen.",
       },
       {
         heading: "Personalisert ustkrifter",
         logo: "moments",
         description:
-          "Ubegrenset med printouts som inneholder din logo, pynt og/eller tekst. Vi hjelper deg med å designe!",
+          "Ubegrenset antall utskrifter som inneholder din logo, pynt eller tekst. Vi hjelper deg med å designe!",
       },
       {
         heading: "Live view, QR-kode og epost deling",
         logo: "polaroid",
         description:
-          "Fotoboksen har skjerm med live view hvor man kan også laste ned egne bilder via en QR-kode eller sende på epost i løpet av festen, rett etter hver 3-shot session.",
+          "Fotoboksen har en skjerm med live view. I tillegg kan man laste ned egne bilder via en QR-kode eller sende dem på e-post i løpet av festen, rett etter hver 3-shot sesjon. Det er enkelt å dele bildene på sosiale medier!",
       },
       {
         heading: "Underholdende props og pynt",
         logo: "witch",
         description:
-          "Vi har masse props og backdrop som du kan bruke for å gjøre bildene morsomme! Vil du ha en tilpasset/tema backdrop eller props, vil vi bestille denne før fra en ekstern leverandør (ekstra kostnader).",
+          "Vi har mange props og fotovegger som du kan bruke for å tilpasse tema til ditt event! Mot en ekstra kostnad kan vi bestille opp den bildeveggen du ønsker.",
       },
     ],
   },
