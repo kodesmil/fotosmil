@@ -9,7 +9,6 @@ import {
   Flex,
   Grid,
   Heading,
-  Input,
   NavLink,
   Text
 } from "theme-ui"
@@ -211,27 +210,6 @@ function FsContact() {
       >
         Skriv oss en melding!
       </Text>
-      <Box sx={{ width: ["90%", "75%", "50%"], mx: "auto" }} mt={3}>
-        <Input placeholder="Name" name="name" mb={3} />
-        <Input placeholder="Email" type="email" name="password" mb={3} />
-      </Box>
-      <Button
-        type="submit"
-        sx={{ mx: "auto", display: "block", backgroundColor: "purple" }}
-      >
-        Send
-      </Button>
-
-      <Text
-        as={"div"}
-        sx={{
-          fontSize: ["3"],
-          textAlign: "center",
-          marginTop: "2em",
-        }}
-      >
-        eller bruk
-      </Text>
       <Link
         style={{
           textAlign: "center",
@@ -240,7 +218,7 @@ function FsContact() {
           marginLeft: "auto",
           marginTop: "1em",
         }}
-        href="mailto:fotosmil.trondheim@gmail.com?subject=Info about Photo Booth"
+        href="mailto:fotosmil.trondheim@gmail.com?subject=Info about Photo Booth&body=Got any questions? I'm happy to help. Please tell us more about your celebrations and the date of your event."
       >
         fotosmil.trondheim@gmail.com
       </Link>
@@ -256,6 +234,28 @@ function FsContact() {
       >
         +47 92125656
       </Link>
+      <Text
+        as={"div"}
+        sx={{
+          fontSize: ["3"],
+          textAlign: "center",
+          marginTop: "8px",
+        }}
+      >
+        eller
+      </Text>
+      <Button
+        style={{
+          textAlign: "center",
+          display: "block",
+          marginRight: "auto",
+          marginLeft: "auto",
+          marginTop: "1em",
+        }}
+        onClick={() => {window.open('https://meetings-eu1.hubspot.com/foto-smil');}}
+        >
+        Avtale Video Møtet
+      </Button>
     </Box>
   )
 }
@@ -278,13 +278,13 @@ function FsLogos(props) {
       </Text>
       <Grid
         gap="3em"
-        columns={[5]}
+        columns={[3, 6]}
         sx={{
           alignItems: "center",
           alignContent: "center",
           background: "white",
           marginTop: ["2em"],
-          paddingX: ["1em", "4em", "8em"],
+          paddingX: ["2em", "4em", "8em"],
           paddingY: ["2em", "4em"],
         }}
       >
@@ -307,7 +307,7 @@ function FsFooter() {
   return (
     <Box
       sx={{
-        marginTop: ["2em", "4em"],
+        marginTop: ["1em"],
       }}
     >
       <Container>
@@ -460,13 +460,39 @@ function FsFooterPictures(props) {
         sx={{
           fontSize: ["4", "5"],
           textAlign: "center",
-          marginBottom: '1.5em'
+          marginBottom: '1em'
         }}
       >
         🦸‍♂️ 🦸‍♀️ Vårt Team 🦸‍♂️ 🦸‍♀️
       </Text>
       <FsPictures pictures={props.pictures} />
     </Container>
+  )
+}
+
+function FsStripes(props) {
+  return (
+    <Box sx={{ width: ["90%", "75%"], mx: "auto", mt: "4em" }}>
+      <Grid
+        gap="0.25em"
+        columns={[3, 6]}
+        sx={{
+          background: "white",
+          boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
+        }}
+      >
+        {props.pictures.nodes.map((picture, i) => (
+          <GatsbyImage
+            key={i}
+            imgStyle={{
+              objectFit: "cover",
+            }}
+            image={picture.childImageSharp.gatsbyImageData}
+            alt=""
+          />
+        ))}
+      </Grid>
+    </Box>
   )
 }
 
@@ -501,6 +527,8 @@ const BlogIndex = ({ data, location }) => {
       <SEO title={siteTitle} />
       <FsTobBar>
         <StaticImage width={48} src="./logo.png" alt="Fotosmil Trondheim" />
+        <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/foto-smil?embed=true"></div>
+        <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
         <Flex as={"nav"}>
           <NavLink
             sx={{
@@ -545,9 +573,10 @@ const BlogIndex = ({ data, location }) => {
       <FsPictures pictures={data.joana} />
       <Offer features={data.site.siteMetadata.features} />
       <FsPricing />
+      <FsStripes pictures={data.stripes} columns={[4]} />
       <FsContact />
-      <FsInsta />
       <FsFotograf />
+      <FsInsta />
       <FsLogos logos={data.logos} />
       <FsFooterPictures pictures={data.pictures} />
       <FsFooter />
@@ -594,7 +623,20 @@ export const pageQuery = graphql`
           gatsbyImageData(
             layout: CONSTRAINED
             placeholder: DOMINANT_COLOR
-            height: 200
+            quality: 25
+          )
+        }
+      }
+    }
+    stripes: allFile(
+      sort: { fields: [relativePath] }
+      filter: { relativePath: { regex: "/stripes//" } }
+    ) {
+      nodes {
+        childImageSharp {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: DOMINANT_COLOR
           )
         }
       }
