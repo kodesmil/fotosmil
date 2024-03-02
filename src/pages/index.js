@@ -185,10 +185,7 @@ function FsContact() {
       }}
       id="contact"
       as="form"
-      method="post"
       name="contact"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact" />
       <Text

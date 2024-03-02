@@ -86,11 +86,7 @@ module.exports = {
         respectDNT: true,
         productionOnly: false,
       },
-    },
+    }
     // `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-plugin-netlify-cms`,
-      options: {},
-    },
   ],
 }
