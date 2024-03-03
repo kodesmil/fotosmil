@@ -583,7 +583,7 @@ const BlogIndex = ({ data, location }) => {
       <SEO title={siteTitle} />
       <FsTobBar>
         <StaticImage width={48} src="./logo.png" alt="Fotosmil Trondheim" />
-        <Text as={"h4"} sx={{ marginLeft: "2em", fontWeight: "600" }}>
+        <Text as={"h4"} sx={{ marginLeft: "1em", fontWeight: "600" }}>
           FotoSmil Trondheim : Fotograferingstjenester
         </Text>
         <Box sx={{ flex: "1 1 auto" }} />
