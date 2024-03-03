@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Leie, Utleie | FotoSmil Trondheim | Photo Booth | Fotoboks`,
+    title: `Leie, Utleie | FotoSmil Trondheim | Photo Booth | Fotoboks | Fotograferingstjenester`,
     name: `Fotoboks`,
     author: {
       name: `FotoSmil Trondheim`,
-      summary: `Leie en photobooth fra FotoSmil Trondheim - skaff deg en profesjonell fotoboks på festen! Perfekt til firmafest, bryllup, barnefest, studentarrangement, julebord, konfirmasjon, bursdag, konsert eller messe!`,
+      summary: `Din beste fotoboks-opplevelse fra A til Å. Trondheim`,
     },
-    description: `Leie en photobooth fra FotoSmil Trondheim - skaff deg en profesjonell fotoboks på festen! Perfekt til firmafest, bryllup, barnefest, studentarrangement, julebord, konfirmasjon, bursdag, konsert eller messe!`,
+    description: `Perfekt for å skape morsomme minner fra alle typer arrangementer: firmafest, bryllup, barnefest, studentarrangement, julebord, konferanse, konfirmasjon, bursdag, jubileum, sommerfest, konsert eller messe!`,
     siteUrl: `https://www.fotosmil.no/`,
     features: [
       {
