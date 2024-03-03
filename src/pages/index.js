@@ -1,6 +1,7 @@
 import { Link, graphql } from "gatsby"
 import React from "react"
 
+import { Menu } from "@headlessui/react"
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 import {
   Box,
@@ -9,9 +10,12 @@ import {
   Flex,
   Grid,
   Heading,
+  IconButton,
+  MenuButton,
   NavLink,
-  Text
+  Text,
 } from "theme-ui"
+import InstagramIcon from "../components/instagram"
 import { Offer } from "../components/offer"
 import SEO from "../components/seo"
 import { StyledBackgroundSection } from "../components/styledBackgroundSection"
@@ -58,18 +62,6 @@ function FsHeader() {
           as={"h1"}
           sx={{
             color: "white",
-            textShadow: "2px 2px 10px black",
-            lineHeight: 1,
-            fontSize: ["6", "7", "8"],
-            textAlign: "center",
-          }}
-        >
-          FotoSmil Trondheim Photobooth
-        </Text>
-        <Text
-          as={"h2"}
-          sx={{
-            color: "white",
             marginTop: "1em",
             textShadow: "2px 2px 10px black",
             lineHeight: "1",
@@ -89,7 +81,10 @@ function FsHeader() {
             textAlign: "center",
           }}
         >
-          Perfekt for å skape morsomme minner fra alle typer arrangementer: firmafest, bryllup, barnefest, studentarrangement, julebord, konferanse, konfirmasjon, bursdag, jubileum, sommerfest, konsert eller messe!
+          Perfekt for å skape morsomme minner fra alle typer arrangementer:
+          firmafest, bryllup, barnefest, studentarrangement, julebord,
+          konferanse, konfirmasjon, bursdag, jubileum, sommerfest, konsert eller
+          messe!
         </Text>
       </Box>
     </StyledBackgroundSection>
@@ -184,10 +179,8 @@ function FsContact() {
         marginRight: ["5%", "10%", "15%"],
       }}
       id="contact"
-      as="form"
       name="contact"
     >
-      <input type="hidden" name="form-name" value="contact" />
       <Text
         as={"h1"}
         sx={{
@@ -249,8 +242,10 @@ function FsContact() {
           marginLeft: "auto",
           marginTop: "1em",
         }}
-        onClick={() => {window.open('https://meetings-eu1.hubspot.com/foto-smil');}}
-        >
+        onClick={() => {
+          window.open("https://meetings-eu1.hubspot.com/foto-smil")
+        }}
+      >
         Avtale Video Møtet
       </Button>
     </Box>
@@ -362,8 +357,10 @@ function FsFotograf() {
             marginTop: "1em",
             textAlign: "center",
           }}
-         >
-          Kanskje ønsker du å få tatt profesjonelle portretter, barnebilder, familieportretter, graviditetsbilder eller forevige viktige øyeblikk under konfirmasjon eller bryllup?
+        >
+          Kanskje ønsker du å få tatt profesjonelle portretter, barnebilder,
+          familieportretter, graviditetsbilder eller forevige viktige øyeblikk
+          under konfirmasjon eller bryllup?
         </Text>
         <Text
           as={"p"}
@@ -448,6 +445,8 @@ function FsPricing() {
 function FsFooterPictures(props) {
   return (
     <Container
+      id="team"
+      anchor="team"
       sx={{
         marginTop: ["4em", "8em"],
       }}
@@ -457,7 +456,7 @@ function FsFooterPictures(props) {
         sx={{
           fontSize: ["4", "5"],
           textAlign: "center",
-          marginBottom: '1em'
+          marginBottom: "1em",
         }}
       >
         🦸‍♂️ 🦸‍♀️ Vårt Team 🦸‍♂️ 🦸‍♀️
@@ -517,6 +516,84 @@ function FsPictures(props) {
   )
 }
 
+function MyDropdown() {
+  return (
+    <Box>
+      <Menu>
+        <Menu.Button
+          style={{
+            background: "transparent",
+            borderColor: "transparent",
+          }}
+        >
+          <MenuButton />
+        </Menu.Button>
+        <Menu.Items style={{ position: "relative" }}>
+          <Flex
+            sx={{
+              position: "absolute",
+              width: "max-content",
+              flexDirection: "column",
+              gap: "0.5em",
+              background: "white",
+              borderRadius: "1em",
+              boxShadow: "0px 0.5px 50px rgba(0,0,0,0.2)",
+              right: "10px",
+              paddingX: "2em",
+              paddingY: "1em",
+            }}
+          >
+            <Menu.Item>
+              {({ active }) => (
+                <NavLink
+                  sx={{
+                    color: "black",
+                  }}
+                  href="#offer"
+                >
+                  Tilbud
+                </NavLink>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <NavLink
+                  sx={{
+                    color: "black",
+                  }}
+                  href="#pricing"
+                >
+                  Pris
+                </NavLink>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <NavLink
+                  sx={{
+                    color: "black",
+                  }}
+                  href="#contact"
+                >
+                  Kontakt
+                </NavLink>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => <NavLink href="#team">Vårt Team</NavLink>}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <NavLink href="#fotograf">Fotograf i Trondheim</NavLink>
+              )}
+            </Menu.Item>
+          </Flex>
+        </Menu.Items>
+      </Menu>
+    </Box>
+  )
+}
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   return (
@@ -524,46 +601,18 @@ const BlogIndex = ({ data, location }) => {
       <SEO title={siteTitle} />
       <FsTobBar>
         <StaticImage width={48} src="./logo.png" alt="Fotosmil Trondheim" />
-        <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/foto-smil?embed=true"></div>
-        <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
-        <Flex as={"nav"}>
-          <NavLink
-            sx={{
-              color: "black",
-              marginLeft: ["1em", "2em", "3em"],
-            }}
-            href="#offer"
-          >
-            Tilbud
-          </NavLink>
-          <NavLink
-            sx={{
-              color: "black",
-              marginLeft: ["1em", "2em", "3em"],
-            }}
-            href="#pricing"
-          >
-            Pris
-          </NavLink>
-          <NavLink
-            sx={{
-              color: "black",
-              marginLeft: ["1em", "2em", "3em"],
-            }}
-            href="#contact"
-          >
-            Kontakt
-          </NavLink>
-            <NavLink
-              sx={{
-                color: "black",
-                marginLeft: ["1em", "3em", "4em"],
-              }}
-              href="#fotograf"
-            >
-              Fotograf i Trondheim
-            </NavLink>
-        </Flex>
+        <Text as={"h4"} sx={{ marginLeft: "2em", fontWeight: "600" }}>
+          FotoSmil Trondheim : Fotograferingstjenester
+        </Text>
+        <Box sx={{ flex: "1 1 auto" }} />
+        <IconButton
+          onClick={() => {
+            window.open("https://www.instagram.com/fotosmil.trondheim")
+          }}
+        >
+          <InstagramIcon />
+        </IconButton>
+        <MyDropdown />
       </FsTobBar>
       <FsHeader background={data.background} />
       <FsSmile />
@@ -571,8 +620,8 @@ const BlogIndex = ({ data, location }) => {
       <Offer features={data.site.siteMetadata.features} />
       <FsPricing />
       <FsStripes pictures={data.stripes} columns={[4]} />
-      <FsContact />
       <FsFotograf />
+      <FsContact />
       <FsInsta />
       <FsLogos logos={data.logos} />
       <FsFooterPictures pictures={data.pictures} />
@@ -631,10 +680,7 @@ export const pageQuery = graphql`
     ) {
       nodes {
         childImageSharp {
-          gatsbyImageData(
-            layout: CONSTRAINED
-            placeholder: DOMINANT_COLOR
-          )
+          gatsbyImageData(layout: CONSTRAINED, placeholder: DOMINANT_COLOR)
         }
       }
     }

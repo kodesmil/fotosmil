@@ -22,7 +22,7 @@ module.exports = {
           "Ubegrenset antall utskrifter som inneholder din logo, pynt eller tekst. Vi hjelper deg med å designe!",
       },
       {
-        heading: "Live view, QR-kode og epost deling",
+        heading: "Live view, QR-kode og bilde deling",
         logo: "polaroid",
         description:
           "Fotoboksen har en skjerm med live view. I tillegg kan man laste ned egne bilder via en QR-kode eller sende dem på e-post i løpet av festen, rett etter hver 3-shot sesjon. Det er enkelt å dele bildene på sosiale medier!",
@@ -86,7 +86,7 @@ module.exports = {
         respectDNT: true,
         productionOnly: false,
       },
-    }
+    },
     // `gatsby-plugin-offline`,
   ],
 }
