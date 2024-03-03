@@ -208,7 +208,7 @@ function FsContact() {
           marginLeft: "auto",
           marginTop: "1em",
         }}
-        href="mailto:fotosmil.trondheim@gmail.com?subject=Info about Photo Booth&body=Got any questions? I'm happy to help. Please tell us more about your celebrations and the date of your event."
+        href="mailto:fotosmil.trondheim@gmail.com?subject=Info about Photo Booth&body=Please tell us more about your celebrations and the date of your event:"
       >
         fotosmil.trondheim@gmail.com
       </Link>
@@ -545,47 +545,29 @@ function MyDropdown() {
           >
             <Menu.Item>
               {({ active }) => (
-                <NavLink
-                  sx={{
-                    color: "black",
-                  }}
-                  href="#offer"
-                >
-                  Tilbud
-                </NavLink>
+                <NavLink href="#fotograf">Fotograf i Trondheim</NavLink>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <NavLink
-                  sx={{
-                    color: "black",
-                  }}
-                  href="#pricing"
-                >
-                  Pris
-                </NavLink>
+                <NavLink href="#offer">Photobooth Tilbud</NavLink>
               )}
             </Menu.Item>
             <Menu.Item>
+              {({ active }) => <NavLink href="#pricing">Pris</NavLink>}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => <NavLink href="#contact">Kontakt</NavLink>}
+            </Menu.Item>
+            <Menu.Item>
               {({ active }) => (
-                <NavLink
-                  sx={{
-                    color: "black",
-                  }}
-                  href="#contact"
-                >
-                  Kontakt
+                <NavLink href="https://meetings-eu1.hubspot.com/foto-smil">
+                  Avtale Video Møtet
                 </NavLink>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => <NavLink href="#team">Vårt Team</NavLink>}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <NavLink href="#fotograf">Fotograf i Trondheim</NavLink>
-              )}
             </Menu.Item>
           </Flex>
         </Menu.Items>
