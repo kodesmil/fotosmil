@@ -583,11 +583,34 @@ const BlogIndex = ({ data, location }) => {
       <SEO title={siteTitle} />
       <FsTobBar>
         <StaticImage width={48} src="./logo.png" alt="Fotosmil Trondheim" />
-        <Text as={"h4"} sx={{ marginLeft: "1em", fontWeight: "600" }}>
-          FotoSmil Trondheim : Fotograferingstjenester
-        </Text>
+        <Flex sx={{ flexDirection: ["column", "row"] }}>
+          <Text
+            as={"h4"}
+            sx={{
+              marginLeft: ["1em"],
+              fontWeight: [600, 600],
+              fontSize: [1, 2],
+            }}
+          >
+            FotoSmil Trondheim
+          </Text>
+          <Text
+            as={"h4"}
+            sx={{
+              marginLeft: ["1em", "0.5em"],
+              fontWeight: [500, 500],
+              fontSize: [1, 2],
+            }}
+          >
+            Fotograferingstjenester
+          </Text>
+        </Flex>
         <Box sx={{ flex: "1 1 auto" }} />
         <IconButton
+          sx={{
+            width: "40px",
+            height: "40px",
+          }}
           onClick={() => {
             window.open("https://www.instagram.com/fotosmil.trondheim")
           }}
