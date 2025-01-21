@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c25335a0-5677-4e94-afa1-35ee66f664df" name="Changes" comment="Add new pictures">
-      <change afterPath="$PROJECT_DIR$/src/components/fsContact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fsFooter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fsFooterPictures.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fsFotograf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fsInsta.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fsLogos.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fsPictures.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fsPricing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fsSmile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fsStripes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fsTobBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/myDropdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/myDropdown2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/bedriftsfotografering/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/Tilbud-Fotosmil.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/bedriftsfotografering/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/bedriftsfotografering/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +91,7 @@
       <workItem from="1659347381795" duration="76000" />
       <workItem from="1666361717508" duration="760000" />
       <workItem from="1675237346356" duration="8533000" />
-      <workItem from="1737429747265" duration="6138000" />
+      <workItem from="1737429747265" duration="7384000" />
     </task>
     <task id="LOCAL-00001" summary="Add new pictures">
       <created>1659201683792</created>
@@ -130,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1675244459457</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add new pictures">
+      <option name="closed" value="true" />
+      <created>1737435936002</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1737435936002</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

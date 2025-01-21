@@ -65,8 +65,9 @@ function FsHeader() {
 
 function FsBedriftOffer() {
     return <Box as={'main'} sx={{
-        width: ["90%", "80%", "40%"],
+        width: ["90%", "80%", "45%"],
         marginTop: '2rem',
+        paddingX: '1rem',
         justifyItems: "center",
         alignContent: "center",
         justifyContent: "center",
