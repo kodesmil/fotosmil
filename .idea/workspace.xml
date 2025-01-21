@@ -5,10 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c25335a0-5677-4e94-afa1-35ee66f664df" name="Changes" comment="Add new pictures">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/fsContact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/fsFooter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/fsFooterPictures.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/fsFotograf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/fsInsta.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/fsLogos.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/fsPictures.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/fsPricing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/fsSmile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/fsStripes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/fsTobBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/myDropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/myDropdown2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/bedriftsfotografering/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/Tilbud-Fotosmil.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +35,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
   <component name="ProjectId" id="2Ccok3h0zI90feAuq8rKFahKvF4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,27 +50,48 @@
     "WHITESOURCE_PRECOMMIT_ANALYSIS": "false",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "/Users/m.urbanski/Projects/gatsby_fotosmil/src/components",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/marcin/Projects/ts/fotosmil/src/components",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
     "prettierjs.PrettierConfiguration.Package": "/Users/m.urbanski/Projects/gatsby_fotosmil/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier"
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "/Users/marcin/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/src/pages/bedrift" />
       <recent name="$PROJECT_DIR$/content/assets/partners" />
       <recent name="$PROJECT_DIR$/content/assets/joana" />
-      <recent name="$PROJECT_DIR$/content/assets/parties" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/content/assets/joana" />
       <recent name="$PROJECT_DIR$/content/assets/parties" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23726.96" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -69,6 +107,7 @@
       <workItem from="1659347381795" duration="76000" />
       <workItem from="1666361717508" duration="760000" />
       <workItem from="1675237346356" duration="8533000" />
+      <workItem from="1737429747265" duration="6138000" />
     </task>
     <task id="LOCAL-00001" summary="Add new pictures">
       <created>1659201683792</created>
