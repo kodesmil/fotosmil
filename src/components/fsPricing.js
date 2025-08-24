@@ -39,7 +39,7 @@ export function FsPricing() {
                         textAlign: "center",
                     }}
                 >
-                    kr. 5170,- for de første to timene og kr. 1830,- per ekstra time.
+                    kr. 5700,- for de første to timene og kr. 1900,- per ekstra time.
                 </Text>
                 <Text
                     as={"div"}
@@ -49,7 +49,7 @@ export function FsPricing() {
                         fontStyle: "italic",
                     }}
                 >
-                    For eksempel 3 timer er kr. 7000,- og 4 timer er kr. 8830,-
+                    For eksempel 3 timer er kr. 7600,- og 4 timer er kr. 9500,-
                 </Text>
             </div>
         </Box>

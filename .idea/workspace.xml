@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c25335a0-5677-4e94-afa1-35ee66f664df" name="Changes" comment="Add new pictures">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/bedriftsfotografering/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/bedriftsfotografering/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="c25335a0-5677-4e94-afa1-35ee66f664df" name="Changes" comment="Add new pictures" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +88,7 @@
       <workItem from="1659347381795" duration="76000" />
       <workItem from="1666361717508" duration="760000" />
       <workItem from="1675237346356" duration="8533000" />
-      <workItem from="1737429747265" duration="7384000" />
+      <workItem from="1737429747265" duration="8606000" />
     </task>
     <task id="LOCAL-00001" summary="Add new pictures">
       <created>1659201683792</created>
@@ -122,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737435936002</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add new pictures">
+      <option name="closed" value="true" />
+      <created>1737438819338</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737438819338</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
